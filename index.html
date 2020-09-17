@@ -4,257 +4,237 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="/css/normalize.css" rel="stylesheet">
+  <link href="/css/index.css" rel="stylesheet">
 </head>
 
 <body>
   <!--HEADER-->
-  <header>
-    <!--Зоголовк необходимо скрыть. не входит в макет-->
-    <h1>Device</h1>
-    <div>
-      <img src="https://via.placeholder.com/" alt="Лого">
+  <header class="header">
+    <div class="header__logo">
+      <img src="https://via.placeholder.com/163x35" alt="Лого">
     </div>
-    <div>
-      <div><input type="text" placeholder="Поиск по сайту"></div>
-      <ul>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+    <div class="header__row header-row">
+      <div class="header-row__search"><input type="text" placeholder="Поиск по сайту"></div>
+      <ul class="header-row__panel user-panel">
+        <li class="user-panel__item"><a href="#">Войти</a></li>
+        <li class="user-panel__item"><a href="#">Сравнить</a></li>
+        <li class="user-panel__item"><a href="#">Корзина</a></li>
       </ul>
     </div>
-    <div>
-      <nav>
-        <div>Каталог товаров</div>
-        <ul>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+    <div class="header__row">
+      <nav class="header__navigation header-navigation">
+        <div class="header-navigation__menu"><a href="#">Каталог товаров</a></div>
+        <ul class="header-navigation__list">
+          <li class="header-navigation__item"><a href="#">Доставка</a></li>
+          <li class="header-navigation__item"><a href="#">Гарантия</a></li>
+          <li class="header-navigation__item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <!--MAIN-->
-  <main>
-    <section>
-      <h2>Горячие предложения</h2>
-      <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
-      <div>
-        <img src="https://via.placeholder.com/384x486" alt="">
+  <main class="main">
+    <!--Зоголовк необходимо скрыть. не входит в макет-->
+    <h1 class="main__title visually-hidden">Device</h1>
+    <section class="main__section">
+      <div class="main__slider slider">
+        <h2 class="slider__title visually-hidden">Горячие предложения</h2>
+        <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
+        <div class="slider__pic">
+          <img src="https://via.placeholder.com/384x486" alt="">
+        </div>
+        <p class="slider__logo">Делай Селфи, как Бен Стиллер</p>
+        <span class="slider__number">01</span>
+        <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине.
+          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+        <a class="slider__more" href="#">Подробнее</a>
+        <!--Навигация по слайдеру(три точки)-->
+        <ul class="slider__nav slider-nav">
+          <li class="slider-nav__item"><a href="#"></a></li>
+          <li class="slider-nav__item"><a href="#"></a></li>
+          <li class="slider-nav__item"><a href="#"></a></li>
+        </ul>
+        <table class="slider__table slider-table">
+          <tr class="slider-table__row">
+            <th>Длина палки</th>
+            <th>Вес палки</th>
+            <th>Материал</th>
+          </tr>
+          <tr class="slider-table__row">
+            <td>8,5 м</td>
+            <td>5 кг</td>
+            <td>Карбон</td>
+          </tr>
+        </table>
       </div>
-      <p>Делай Селфи,<br>
-        как Бен Стиллер</p>
-      <span>01</span>
-      <p>Самая длинная палка для селфи доступна в нашем магазине.<br>
-        Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-      <a href="#">Подробнее</a>
-      <!--Навигация по слайдеру(три точки)-->
-      <ul>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-      <table>
-        <tr>
-          <th>Длина палки</th>
-          <th>Вес палки</th>
-          <th>Материал</th>
-        </tr>
-        <tr>
-          <td>8,5 м</td>
-          <td>5 кг</td>
-          <td>Карбон</td>
-        </tr>
-      </table>
-      <ul>
-        <li>
+      <ul class="main__popular main-popular">
+        <li class="main-popular__item poular-item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
-            <h3>
-              Виртуальная<br>
-              рельность
+            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <h3 class="popular-item__title">
+              Виртуальная рельность
             </h3>
           </a>
         </li>
-        <li>
+        <li class="main-popular__item poular-item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
-            <h3>
-              Моноподы<br>
-              для селфи
+            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <h3 class="popular-item__title">
+              Моноподы для селфи
             </h3>
           </a>
         </li>
-        <li>
+        <li class="main-popular__item popular-item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
-            <h3>
+            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <h3 class="popular-item__title">
               Экшен-камеры
             </h3>
           </a>
         </li>
-        <li>
+        <li class="main-popular__item popular-item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
-            <h3>
+            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <h3 class="popular-item__title">
               Фитнес-браслеты
             </h3>
           </a>
         </li>
-        <li>
+        <li class="main-popular__item popular-item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
-            <h3>
+            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <h3 class="popular-item__title">
               Умные часы
             </h3>
           </a>
         </li>
-        <li>
+        <li class="main-popular__item popular-item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
-            <h3>
+            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <h3 class="popular-item__title">
               Квадрокоптеры
             </h3>
           </a>
         </li>
       </ul>
     </section>
-    <section>
-      <!--Этот заголовок не входит в макет. Необходимо скрывать-->
-      <h2>Дополнительные услуги</h2>
-      <ul>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Кредит</a></li>
-      </ul>
-      <div>
-        <span>Доставка</span>
-        <img src="https://via.placeholder.com/" alt="">
-        <p>
-          Мы с удовольствием доставим ваш товар прямо к вашему<br>
-          подъезду совершенно бесплатно! Ведь мы неплохо<br>
-          заработаем, поднимая его на ваш этаж.
-        </p>
+    <section class="main__section services">
+      <div class="main__services services">
+        <!--Этот заголовок не входит в макет. Необходимо скрывать-->
+        <h2 class="services__title visually-hidden">Дополнительные услуги</h2>
+        <ul class="services__menu services-menu">
+          <li class="services-menu__item"><a href="#">Доставка</a></li>
+          <li class="services-menu__item"><a href="#">Гарантия</a></li>
+          <li class="services-menu__item"><a href="#">Кредит</a></li>
+        </ul>
+        <div class="services__item services-item">
+          <span class="services-item__title">Доставка</span>
+          <img class="services-item__logo" src="https://via.placeholder.com/136x164" alt="">
+          <p class="services-item__text">
+            Мы с удовольствием доставим ваш товар прямо к вашему
+            подъезду совершенно бесплатно! Ведь мы неплохо
+            заработаем, поднимая его на ваш этаж.
+          </p>
+        </div>
       </div>
       <!--логотипы-->
-      <ul>
-        <li>
-          <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
+      <ul class="main__partners partners">
+        <li class="partners__item">
+          <a class="partners__logo" href="#">
+            <img src="https://via.placeholder.com/260x100" alt="">
           </a>
         </li>
-        <li>
-          <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
+        <li class="partners__item">
+          <a class="partners__logo" href="#">
+            <img src="https://via.placeholder.com/260x100" alt="">
           </a>
         </li>
-        <li>
-          <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
+        <li class="partners__item">
+          <a class="partners__logo" href="#">
+            <img src="https://via.placeholder.com/260x100" alt="">
           </a>
         </li>
-        <li>
-          <a href="#">
-            <img src="https://via.placeholder.com/" alt="">
+        <li class="partners__item">
+          <a class="partners__logo" href="#">
+            <img src="https://via.placeholder.com/260x100" alt="">
           </a>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="main__section info">
       <!--Этот заголовк не входит в макет. нужно скрыть-->
-      <h2>Информация</h2>
-      <div>
-        <h3>О нас</h3>
-        <p>
-          Огромный выбор гаджетов не оставит равнодушным гика,<br>
+      <h2 class="info__title visually-hidden">Информация</h2>
+      <div class="info__about info-about">
+        <h3 class="info-about__title">О нас</h3>
+        <p class="info-abount__text">
+          Огромный выбор гаджетов не оставит равнодушным гика,
           который есть в каждом из нас.
         </p>
-        <p>
-          Мы можем доставить ваш товар в самые отдаленные точки<br>
+        <p class="info-abount__text">
+          Мы можем доставить ваш товар в самые отдаленные точки
           России! DEVICE работает со многими транспортными компаниями:
         </p>
-        <ul>
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
+        <ul class="info-about__list">
+          <li class="info-about__item">Деловые линии</li>
+          <li class="info-about__item">Автотрейдинг</li>
+          <li class="info-about__item">ЖелДорЭкспедиция</li>
         </ul>
-        <span>Подробнее о нас</span>
+        <a href="#" class="info-about__more">Подробнее о нас</a></span>
       </div>
-      <div>
-        <h3>Контакты</h3>
-        <p>
-          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
+      <div class="info__contact info-contact">
+        <h3 class="info-contact__title">Контакты</h3>
+        <p class="info-contact__text">
+          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает
         </p>
         <!--Карта-->
-        <img src="https://via.placeholder.com/" alt="Карта">
-        <a href="#">Напишите нам</a>
+        <div class="info-contact__map"><img src="https://via.placeholder.com/560x222" alt="Карта"></div>
+        <a class="info-contact__letter" href="#">Напишите нам</a>
       </div>
     </section>
   </main>
   <!--FOOTER-->
-  <footer>
-    <div>
-      <div><img src="https://via.placeholder.com/" alt="Лого"></div>
-      <ul>
-        <li>
-          <a href="#">
-            Войти
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Сравнить
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Корзина
-          </a>
-        </li>
+  <footer class="footer">
+    <div class="footer__row">
+      <div class="footer__logo"><img src="https://via.placeholder.com/163x35" alt="Лого"></div>
+      <ul class="footer__panel footer-panel">
+        <li class="footer-panel__item"><a href="#">Войти</a></li>
+        <li class="footer-panel__item"><a href="#">Сравнить</a></li>
+        <li class="footer-panel__item"><a href="#">Корзина</a></li>
       </ul>
     </div>
-    <div>
-      <address>г. Москва, ул. Строителей, 15</address>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">
-              Доставка
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Гарантия
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Контакты
-            </a>
-          </li>
+    <div class="footer__row">
+      <address class="footer__address">г. Москва, ул. Строителей, 15</address>
+      <nav class="footer__navigation footer-navigation">
+        <ul class="footer-navigation__list">
+          <li class="footer-navigation__item"><a href="#">Доставка</a></li>
+          <li class="footer-navigation__item"><a href="#">Гарантия</a></li>
+          <li class="footer-navigation__item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
-      <a href="tel:+74954959595">+7 (495) 495-95-95 </a>
+      <a class="footer__tel" href="tel:+74954959595">+7 (495) 495-95-95 </a>
     </div>
-    <div>
-      <ul>
-        <li>
+    <div class="footer__row">
+      <ul class="footer__socials footer-socials">
+        <li class="footer-socials__item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="facebook">
+            <img src="https://via.placeholder.com/32x32" alt="facebook">
           </a>
         </li>
-        <li>
+        <li class="footer-socials__item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="Instagram">
+            <img src="https://via.placeholder.com/32x32" alt="Instagram">
           </a>
         </li>
-        <li>
+        <li class="footer-socials__item">
           <a href="#">
-            <img src="https://via.placeholder.com/" alt="Twitter">
+            <img src="https://via.placeholder.com/32x32" alt="Twitter">
           </a>
         </li>
       </ul>
-      <a href="#"><img src="https://via.placeholder.com/" alt="AcademyLogo"></a>
+      <a class="footer__academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/27x34"
+          alt="AcademyLogo"></a>
     </div>
   </footer>
 </body>

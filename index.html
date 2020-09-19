@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,18 +17,32 @@
     <div class="header__row header-row">
       <div class="header-row__search"><input type="text" placeholder="Поиск по сайту"></div>
       <ul class="header-row__panel user-panel">
-        <li class="user-panel__item"><a href="#">Войти</a></li>
-        <li class="user-panel__item"><a href="#">Сравнить</a></li>
-        <li class="user-panel__item"><a href="#">Корзина</a></li>
+        <li class="user-panel__item">
+          <a href="#">Войти</a>
+        </li>
+        <li class="user-panel__item">
+          <a href="#">Сравнить</a>
+        </li>
+        <li class="user-panel__item">
+          <a href="#">Корзина</a>
+        </li>
       </ul>
     </div>
     <div class="header__row">
       <nav class="header__navigation header-navigation">
-        <div class="header-navigation__menu"><a href="#">Каталог товаров</a></div>
+        <div class="header-navigation__menu">
+          <a href="#">Каталог товаров</a>
+        </div>
         <ul class="header-navigation__list">
-          <li class="header-navigation__item"><a href="#">Доставка</a></li>
-          <li class="header-navigation__item"><a href="#">Гарантия</a></li>
-          <li class="header-navigation__item"><a href="#">Контакты</a></li>
+          <li class="header-navigation__item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="header-navigation__item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="header-navigation__item">
+            <a href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -39,47 +53,132 @@
     <h1 class="main__title visually-hidden">Device</h1>
     <section class="main__section">
       <div class="main__slider slider">
-        <h2 class="slider__title visually-hidden">Горячие предложения</h2>
-        <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
-        <div class="slider__pic">
-          <img src="https://via.placeholder.com/384x486" alt="">
+        <div class="slider__item">
+          <h2 class="slider__title visually-hidden">Горячие предложения</h2>
+          <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
+          <div class="slider__pic">
+            <img src="https://via.placeholder.com/384x486" alt="">
+          </div>
+          <p class="slider__logo">Делай Селфи, как Бен Стиллер</p>
+          <span class="slider__number">01</span>
+          <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине.
+            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <span class="slider__more">
+            <a href="#">Подробнее</a>
+          </span>
+          <!--Навигация по слайдеру(три точки)-->
+          <ul class="slider__nav slider-nav">
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+          </ul>
+          <table class="slider__table slider-table">
+            <tr class="slider-table__row">
+              <th>Длина палки</th>
+              <th>Вес палки</th>
+              <th>Материал</th>
+            </tr>
+            <tr class="slider-table__row">
+              <td>8,5 м</td>
+              <td>5 кг</td>
+              <td>Карбон</td>
+            </tr>
+          </table>
         </div>
-        <p class="slider__logo">Делай Селфи, как Бен Стиллер</p>
-        <span class="slider__number">01</span>
-        <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине.
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-        <a class="slider__more" href="#">Подробнее</a>
-        <!--Навигация по слайдеру(три точки)-->
-        <ul class="slider__nav slider-nav">
-          <li class="slider-nav__item"><a href="#"></a></li>
-          <li class="slider-nav__item"><a href="#"></a></li>
-          <li class="slider-nav__item"><a href="#"></a></li>
-        </ul>
-        <table class="slider__table slider-table">
-          <tr class="slider-table__row">
-            <th>Длина палки</th>
-            <th>Вес палки</th>
-            <th>Материал</th>
-          </tr>
-          <tr class="slider-table__row">
-            <td>8,5 м</td>
-            <td>5 кг</td>
-            <td>Карбон</td>
-          </tr>
-        </table>
+        <div class="slider__item">
+          <h2 class="slider__title visually-hidden">Горячие предложения</h2>
+          <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
+          <div class="slider__pic">
+            <img src="https://via.placeholder.com/345x485" alt="">
+          </div>
+          <p class="slider__logo">Худеем правильно!</p>
+          <span class="slider__number">02</span>
+          <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы
+            не пропускать занятия и соблюдать диету.</p>
+          <span class="slider__more">
+            <a href="#">Подробнее</a>
+          </span>
+          <!--Навигация по слайдеру(три точки)-->
+          <ul class="slider__nav slider-nav">
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+          </ul>
+          <table class="slider__table slider-table">
+            <tr class="slider-table__row">
+              <th>Без подзарядки</th>
+            </tr>
+            <tr class="slider-table__row">
+              <td>48 часов</td>
+            </tr>
+          </table>
+        </div>
+        <div class="slider__item">
+          <h2 class="slider__title visually-hidden">Горячие предложения</h2>
+          <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
+          <div class="slider__pic">
+            <img src="https://via.placeholder.com/526x334" alt="">
+          </div>
+          <p class="slider__logo">Порхает как бабочка, жалит как пчела!</p>
+          <span class="slider__number">03</span>
+          <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен
+            мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <span class="slider__more">
+            <a href="#">Подробнее</a>
+          </span>
+          <!--Навигация по слайдеру(три точки)-->
+          <ul class="slider__nav slider-nav">
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#"></a>
+            </li>
+          </ul>
+          <table class="slider__table slider-table">
+            <tr class="slider-table__row">
+              <th>Дальность полета</th>
+              <th>Радиус поражения</th>
+            </tr>
+            <tr class="slider-table__row">
+              <td>800 м</td>
+              <td>50 м</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <ul class="main__popular main-popular">
-        <li class="main-popular__item poular-item">
+        <li class="main-popular__item popular-item">
           <a href="#">
-            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <div class="popular-item__pic">
+              <img src="https://via.placeholder.com/160x160" alt="">
+            </div>
             <h3 class="popular-item__title">
               Виртуальная рельность
             </h3>
           </a>
         </li>
-        <li class="main-popular__item poular-item">
+        <li class="main-popular__item popular-item">
           <a href="#">
-            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <div class="popular-item__pic">
+              <img src="https://via.placeholder.com/160x160" alt="">
+            </div>
             <h3 class="popular-item__title">
               Моноподы для селфи
             </h3>
@@ -87,7 +186,9 @@
         </li>
         <li class="main-popular__item popular-item">
           <a href="#">
-            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <div class="popular-item__pic">
+              <img src="https://via.placeholder.com/160x160" alt="">
+            </div>
             <h3 class="popular-item__title">
               Экшен-камеры
             </h3>
@@ -95,7 +196,9 @@
         </li>
         <li class="main-popular__item popular-item">
           <a href="#">
-            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <div class="popular-item__pic">
+              <img src="https://via.placeholder.com/160x160" alt="">
+            </div>
             <h3 class="popular-item__title">
               Фитнес-браслеты
             </h3>
@@ -103,7 +206,9 @@
         </li>
         <li class="main-popular__item popular-item">
           <a href="#">
-            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <div class="popular-item__pic">
+              <img src="https://via.placeholder.com/160x160" alt="">
+            </div>
             <h3 class="popular-item__title">
               Умные часы
             </h3>
@@ -111,7 +216,9 @@
         </li>
         <li class="main-popular__item popular-item">
           <a href="#">
-            <img class="popular-item__pic" src="https://via.placeholder.com/160x160" alt="">
+            <div class="popular-item__pic">
+              <img src="https://via.placeholder.com/160x160" alt="">
+            </div>
             <h3 class="popular-item__title">
               Квадрокоптеры
             </h3>
@@ -119,14 +226,26 @@
         </li>
       </ul>
     </section>
-    <section class="main__section services">
+    <section class="main__section">
       <div class="main__services services">
         <!--Этот заголовок не входит в макет. Необходимо скрывать-->
         <h2 class="services__title visually-hidden">Дополнительные услуги</h2>
         <ul class="services__menu services-menu">
-          <li class="services-menu__item"><a href="#">Доставка</a></li>
-          <li class="services-menu__item"><a href="#">Гарантия</a></li>
-          <li class="services-menu__item"><a href="#">Кредит</a></li>
+          <li class="services-menu__item">
+            <span>
+              <a href="#">Доставка</a>
+            </span>
+          </li>
+          <li class="services-menu__item">
+            <span>
+              <a href="#">Гарантия</a>
+            </span>
+          </li>
+          <li class="services-menu__item">
+            <span>
+              <a href="#">Кредит</a>
+            </span>
+          </li>
         </ul>
         <div class="services__item services-item">
           <span class="services-item__title">Доставка</span>
@@ -135,6 +254,24 @@
             Мы с удовольствием доставим ваш товар прямо к вашему
             подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем, поднимая его на ваш этаж.
+          </p>
+        </div>
+        <div class="services__item services-item">
+          <span class="services-item__title">Гарантия</span>
+          <img class="services-item__logo" src="https://via.placeholder.com/171x195" alt="">
+          <p class="services-item__text">
+            Если из-за возгорания купленного у нас товара у вас сгорит дом —
+            не переживайте, мы выдадим вам новый.
+            Товар, не дом, конечно же.
+          </p>
+        </div>
+        <div class="services__item services-item">
+          <span class="services-item__title">Кредит</span>
+          <img class="services-item__logo" src="https://via.placeholder.com/156x188" alt="">
+          <p class="services-item__text">
+            Залезть в долговую яму стало проще! Кредитные консультанты
+            подберут для вас наиболее выгодные
+            условия кредита. Выгодные для нашего банка, разумеется.
           </p>
         </div>
       </div>
@@ -180,7 +317,9 @@
           <li class="info-about__item">Автотрейдинг</li>
           <li class="info-about__item">ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#" class="info-about__more">Подробнее о нас</a></span>
+        <span class="info-about__more">
+          <a href="#">Подробнее о нас</a>
+        </span>
       </div>
       <div class="info__contact info-contact">
         <h3 class="info-contact__title">Контакты</h3>
@@ -189,8 +328,12 @@
           проверить работоспособность покупки. Всякое бывает
         </p>
         <!--Карта-->
-        <div class="info-contact__map"><img src="https://via.placeholder.com/560x222" alt="Карта"></div>
-        <a class="info-contact__letter" href="#">Напишите нам</a>
+        <div class="info-contact__map">
+          <img src="https://via.placeholder.com/560x222" alt="Карта">
+        </div>
+        <span class="info-contact__letter">
+          <a href="#">Напишите нам</a>
+        </span>
       </div>
     </section>
   </main>
@@ -199,18 +342,30 @@
     <div class="footer__row">
       <div class="footer__logo"><img src="https://via.placeholder.com/163x35" alt="Лого"></div>
       <ul class="footer__panel footer-panel">
-        <li class="footer-panel__item"><a href="#">Войти</a></li>
-        <li class="footer-panel__item"><a href="#">Сравнить</a></li>
-        <li class="footer-panel__item"><a href="#">Корзина</a></li>
+        <li class="footer-panel__item">
+          <a href="#">Войти</a>
+        </li>
+        <li class="footer-panel__item">
+          <a href="#">Сравнить</a>
+        </li>
+        <li class="footer-panel__item">
+          <a href="#">Корзина</a>
+        </li>
       </ul>
     </div>
     <div class="footer__row">
       <address class="footer__address">г. Москва, ул. Строителей, 15</address>
       <nav class="footer__navigation footer-navigation">
         <ul class="footer-navigation__list">
-          <li class="footer-navigation__item"><a href="#">Доставка</a></li>
-          <li class="footer-navigation__item"><a href="#">Гарантия</a></li>
-          <li class="footer-navigation__item"><a href="#">Контакты</a></li>
+          <li class="footer-navigation__item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="footer-navigation__item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="footer-navigation__item">
+            <a href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
       <a class="footer__tel" href="tel:+74954959595">+7 (495) 495-95-95 </a>
@@ -233,8 +388,9 @@
           </a>
         </li>
       </ul>
-      <a class="footer__academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/27x34"
-          alt="AcademyLogo"></a>
+      <a class="footer__academy" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="https://via.placeholder.com/27x34" alt="AcademyLogo">
+      </a>
     </div>
   </footer>
 </body>

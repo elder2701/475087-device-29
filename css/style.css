@@ -35,6 +35,9 @@
   --additional-yellow: #f0c52e;
   --additional-light-yellow: #f7e296;
   --additional-green: #91c92f;
+  --additional-dark-grey: #d9d9d9;
+  --aditional-grey: #dcdcdc;
+  --aditional-light-grey: #eeeeee;
 
   --status-pink: #f6dada;
 }
@@ -74,6 +77,14 @@ img {
   background: var(--additional-light-yellow);
 }
 
+.header__logo a:hover {
+  opacity: 0.6;
+}
+
+.header__logo a:focus {
+  opacity: 0.3;
+}
+
 .header-row__search input {
   border: none;
   background: var(--additional-light-yellow);
@@ -107,6 +118,10 @@ img {
 .header-row__panel a:focus,
 .header-navigation__list a:focus,
 .header-navigation__menu a:focus {
+  opacity: 0.3;
+}
+
+.user-panel__item.user-panel__item--logout {
   opacity: 0.3;
 }
 
@@ -149,12 +164,12 @@ img {
   line-height: 58px;
 }
 
-.slider__more {
+.slider__more span{
   position: relative;
   padding: 10px 35px;
 }
 
-.slider__more a {
+.slider__more {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -178,9 +193,10 @@ img {
 
 .slider__more:hover::before {
   height: 100%;
+  transition: height 0.5s;
 }
 
-.slider__more a:focus {
+.slider__more:focus span{
   opacity: 0.3;
 }
 
@@ -201,6 +217,7 @@ img {
 }
 
 .slider__nav {
+  display: flex;
   list-style: none;
 }
 
@@ -214,6 +231,7 @@ img {
 
 .main__popular {
   list-style: none;
+  display: flex;
 }
 
 .popular-item__title {
@@ -223,6 +241,25 @@ img {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+}
+
+.popular-item__pic {
+  background: var(--additional-light-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-popular__item:hover .popular-item__pic {
+  background: var(--additional-yellow);
+}
+
+.main-popular__item a:focus .popular-item__pic img {
+  opacity: 0.3;
+}
+
+.main-popular__item a:focus .popular-item__title {
+  opacity: 0.3;
 }
 
 .main__services.services {
@@ -252,7 +289,7 @@ img {
   position: relative;
 }
 
-.services-menu__item span::before {
+.services-menu__item a::before {
   content: "";
   display: block;
   height: 8px;
@@ -263,8 +300,9 @@ img {
   transform: translateY(-50%);
 }
 
-.services-menu__item span:hover::before {
+.services-menu__item a:hover::before {
   height: 100%;
+  transition: height 0.5s;
 }
 
 .services-item__title {
@@ -280,8 +318,19 @@ img {
   letter-spacing: 0.1em;
 }
 
-.main__partners.partners {
+.main__partners {
+  display: flex;
   list-style: none;
+}
+
+.partners__logo {
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+
+.partners__logo:hover {
+  filter: none;
+  opacity: 1;
 }
 
 /*information*/
@@ -327,18 +376,18 @@ img {
   line-height: 28px;
 }
 
-.info-about__more {
+.info-about__more span {
   position: relative;
   padding: 10px 20px;
 }
 
-.info-contact__letter {
+.info-contact__letter span {
   position: relative;
   padding: 10px 40px;
 }
 
-.info-about__more a,
-.info-contact__letter a {
+.info-about__more,
+.info-contact__letter {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -364,10 +413,11 @@ img {
 .info-about__more:hover::before,
 .info-contact__letter:hover::before {
   height: 100%;
+  transition: height 0.5s;
 }
 
-.info-about__more a:focus,
-.info-contact__letter a:focus {
+.info-about__more:focus span,
+.info-contact__letter:focus span {
   opacity: 0.3;
 }
 
@@ -383,6 +433,8 @@ img {
   list-style: none;
 }
 
+
+
 .breadcrumbs__item a {
   color: inherit;
   font-weight: 300;
@@ -391,9 +443,29 @@ img {
   opacity: 0.3;
 }
 
-/*TODO цвет не соответствует макету*/
+.breadcrumbs__item--next a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs__item--next a:focus {
+  opacity: 0.1;
+}
+
+.breadcrumbs__item:nth-child(n+2)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  color: var(--basic-black);
+  border-top: 1px solid var(--basic-black);
+  border-left: 1px solid var(--basic-black);
+  transform: rotate(135deg);
+}
+
 .filters__title {
-  background: var(--basic-light-grey);
+  background: var(--aditional-grey);
 }
 
 .filters__title h2 {
@@ -422,6 +494,36 @@ img {
   list-style: none;
 }
 
+.catalog-options__rows {
+  display: flex;
+}
+
+.catalog-options__rows a:hover {
+  opacity: 0.4;
+}
+
+.catalog-options__rows a:focus {
+  opacity: 1;
+}
+
+.catalog-options__row--up {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 11px solid var(--basic-black);
+  opacity: 0.2;
+}
+
+.catalog-options__row--down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 11px solid var(--basic-black);
+}
+
 .catalog-options__item a {
   color: inherit;
   font-size: 14px;
@@ -429,7 +531,19 @@ img {
   opacity: 0.3;
 }
 
-.catalog-options__item.catalog-options__item-active a {
+.catalog-options__item a {
+  opacity: 1;
+}
+
+.catalog-options__item.catalog-options__item--noactive a {
+  opacity: 0.3;
+}
+
+.catalog-options__item--noactive a:hover {
+  opacity: 0.6;
+}
+
+.catalog-options__item--noactive a:focus {
   opacity: 1;
 }
 
@@ -454,8 +568,7 @@ img {
   letter-spacing: 0.05em;
 }
 
-/**TODO цвет не соответствует макету*/
-.catalog__pagination.pagination {
+.catalog__pagination {
   background: var(--basic-light-grey);
 }
 
@@ -473,39 +586,37 @@ img {
   color: inherit;
 }
 
-.pagination__item.pagination__item-noactive a {
+.pagination__item.pagination__item--noactive a {
   opacity: 0.3;
 }
 
-.pagination__item.pagination__item-noactive a:hover {
+.pagination__item.pagination__item--noactive a:hover {
   opacity: 0.6;
 }
 
-.pagination__item.pagination__item-noactive a:focus {
+.pagination__item.pagination__item--noactive a:focus {
   opacity: 1;
 }
 
-/*Тут пытаюсь выделить кнопки назад и вперед -  не получается*/
-/*TODO доделать hove и focus*/
-.pagination__item:first-child:hover,
-.pagination__item:last-child:hover {
-}
-.pagination__list:first-child a:focus,
-.pagination__list:last-child:focus a:focus {
-}
-/****************************************/
-
-/*TODO цвет не соответствует макету*/
-.catalog-item__menu.item-menu {
-  background: var(--basic-light-grey);
+.pagination__item--next:hover {
+  background: var(--additional-dark-grey);
 }
 
-.item-menu__adding {
+.pagination__item--next a:focus {
+  opacity: 0.3;
+}
+
+.catalog-item__menu {
+  background: var(--aditional-light-grey);
+  opacity: 0.7; /*TODO прозрачная вся плашка. в том числе и кнопки - надо исправить*/
+}
+
+.item-menu__adding span {
   position: relative;
   padding: 10px 35px;
 }
 
-.item-menu__adding a {
+.item-menu__adding {
   color: inherit;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -516,7 +627,6 @@ img {
   position: relative;
 }
 
-
 .item-menu__adding::before {
   content: "";
   display: block;
@@ -525,14 +635,15 @@ img {
   position: absolute;
   background: var(--additional-yellow);
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 
 .item-menu__adding:hover::before {
   height: 100%;
+  transition: height 0.5s;
 }
 
-.item-menu__adding a:focus {
+.item-menu__adding:focus span {
   opacity: 0.3;
 }
 
@@ -541,7 +652,14 @@ img {
   line-height: 18px;
   letter-spacing: 0.1em;
   color: inherit;
-  opacity: 0.7;
+}
+
+.item-menu__compare:hover {
+  opacity: 0.6;
+}
+
+.item-menu__compare:focus {
+  opacity: 0.3;
 }
 
 /*footer styles*/
@@ -549,7 +667,15 @@ img {
   background: var(--basic-dark-grey);
 }
 
-.footer__panel.footer-panel {
+.footer__logo a:hover {
+  opacity: 0.6;
+}
+
+.footer__logo a:focus {
+  opacity: 0.3;
+}
+
+.footer__panel {
   list-style: none;
 }
 
@@ -557,6 +683,8 @@ img {
   color: var(--basic-white);
   opacity: 0.7;
 }
+
+/**TODO тут у итемов у текста и иконок разные opacity. сейчас сделаны одинаковые*/
 
 .footer-panel__item a:hover {
   opacity: 1;
@@ -571,9 +699,21 @@ img {
   font-style: normal;
 }
 
-.footer__socials,
-.footer-socials {
+.footer__socials {
+  display: flex;
   list-style: none;
+}
+
+.footer-socials__item a {
+  opacity: 0.6;
+}
+
+.footer-socials__item a:hover {
+  opacity: 1;
+}
+
+.footer-socials__item a:focus {
+  opacity: 0.3;
 }
 
 .footer-navigation__list {
@@ -600,4 +740,12 @@ img {
 
 .footer__tel {
   color: var(--basic-white);
+}
+
+.footer__academy:hover {
+  opacity: 0.6;
+}
+
+.footer__academy:focus {
+  opacity: 0.3;
 }

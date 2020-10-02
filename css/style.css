@@ -42,6 +42,10 @@
   --status-pink: #f6dada;
 }
 
+.page {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -50,6 +54,18 @@ body {
   font-weight: 300;
   line-height: 20px;
   color: var(--basic-black);
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 a {
@@ -73,7 +89,7 @@ img {
 }
 
 /*Header style*/
-.header {
+.header .container {
   background: var(--additional-light-yellow);
 }
 
@@ -121,7 +137,7 @@ img {
   opacity: 0.3;
 }
 
-.user-panel__item.user-panel__item--logout {
+.user-panel__item--logout {
   opacity: 0.3;
 }
 
@@ -164,7 +180,7 @@ img {
   line-height: 58px;
 }
 
-.slider__more span{
+.slider__more span {
   position: relative;
   padding: 10px 35px;
 }
@@ -231,7 +247,9 @@ img {
 
 .main__popular {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 40px;
 }
 
 .popular-item__title {
@@ -245,6 +263,8 @@ img {
 
 .popular-item__pic {
   background: var(--additional-light-yellow);
+  width: 160px;
+  height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,15 +274,17 @@ img {
   background: var(--additional-yellow);
 }
 
-.main-popular__item a:focus .popular-item__pic img {
+.main-popular__link:focus img {
   opacity: 0.3;
 }
 
-.main-popular__item a:focus .popular-item__title {
+/*TODO Фокус почему-то не работает???*/
+
+.main-popular__link:focus .popular-item__title {
   opacity: 0.3;
 }
 
-.main__services.services {
+.services { 
   background: var(--basic-light-grey);
 }
 
@@ -334,6 +356,15 @@ img {
 }
 
 /*information*/
+
+/*TODO на контайнер вообще номально вешать что-то кроме свойств для центровки, 
+в данном случае уникальное позиционирование для данного контента. мб надо доп. обертку?*/
+
+.info .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .info-about__title,
 .info-contact__title {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -431,9 +462,8 @@ img {
 
 .catalog-header__breadcrumbs.breadcrumbs {
   list-style: none;
+  position: relative;
 }
-
-
 
 .breadcrumbs__item a {
   color: inherit;
@@ -443,6 +473,9 @@ img {
   opacity: 0.3;
 }
 
+/*TODO замечание с прошлого камита. так пока и не понял как это убрать
+либо кнопки вперед назад выносить из общего списка с цифрами
+*/
 .breadcrumbs__item--next a:hover {
   opacity: 0.6;
 }
@@ -451,7 +484,7 @@ img {
   opacity: 0.1;
 }
 
-.breadcrumbs__item:nth-child(n+2)::before {
+.breadcrumbs__item:not(:first-child)::before{
   content: "";
   display: block;
   position: absolute;
@@ -506,7 +539,7 @@ img {
   opacity: 1;
 }
 
-.catalog-options__row--up {
+.catalog-options__up {
   display: block;
   width: 0;
   height: 0;
@@ -516,7 +549,7 @@ img {
   opacity: 0.2;
 }
 
-.catalog-options__row--down {
+.catalog-options__down {
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -531,25 +564,44 @@ img {
   opacity: 0.3;
 }
 
-.catalog-options__item a {
-  opacity: 1;
-}
-
-.catalog-options__item.catalog-options__item--noactive a {
-  opacity: 0.3;
-}
-
-.catalog-options__item--noactive a:hover {
+.catalog-options__item a:hover {
   opacity: 0.6;
 }
 
-.catalog-options__item--noactive a:focus {
+.catalog-options__item a:focus {
+  opacity: 1;
+}
+
+.catalog-options__item.catalog-options__item--active a {
   opacity: 1;
 }
 
 .catalog__list {
   list-style: none;
 }
+
+.catalog-item__stuff {
+  position: relative;
+}
+
+.catalog-item__menu {
+  background: var(--aditional-light-grey);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.catalog-item__stuff:hover .catalog-item__menu {
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
 
 .catalog-item__title a {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -586,15 +638,15 @@ img {
   color: inherit;
 }
 
-.pagination__item.pagination__item--noactive a {
+.pagination__item--noactive a {
   opacity: 0.3;
 }
 
-.pagination__item.pagination__item--noactive a:hover {
+.pagination__item--noactive a:hover {
   opacity: 0.6;
 }
 
-.pagination__item.pagination__item--noactive a:focus {
+.pagination__item--noactive a:focus {
   opacity: 1;
 }
 
@@ -604,11 +656,6 @@ img {
 
 .pagination__item--next a:focus {
   opacity: 0.3;
-}
-
-.catalog-item__menu {
-  background: var(--aditional-light-grey);
-  opacity: 0.7; /*TODO прозрачная вся плашка. в том числе и кнопки - надо исправить*/
 }
 
 .item-menu__adding span {

@@ -89,7 +89,7 @@ img {
 }
 
 /*Header style*/
-.header .container {
+.container--yellow {
   background: var(--additional-light-yellow);
 }
 
@@ -101,7 +101,11 @@ img {
   opacity: 0.3;
 }
 
-.header-row__search input {
+.header__row {
+  display: flex;
+}
+
+.header__row input {
   border: none;
   background: var(--additional-light-yellow);
 }
@@ -115,14 +119,23 @@ img {
   opacity: 0.6;
 }
 
+.header__navigation {
+  display: flex;
+}
+
 .header-row__panel,
 .header-navigation__list {
   list-style: none;
+  display: flex;
   margin: 0;
 }
 
 .header-row__panel a {
   color: var(--basic-black);
+}
+
+.header-navigation__menu {
+  display: flex;
 }
 
 .header-row__panel a:hover,
@@ -357,10 +370,7 @@ img {
 
 /*information*/
 
-/*TODO на контайнер вообще номально вешать что-то кроме свойств для центровки, 
-в данном случае уникальное позиционирование для данного контента. мб надо доп. обертку?*/
-
-.info .container {
+.info__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -453,6 +463,11 @@ img {
 }
 
 /*Catalogue styles*/
+
+.main__catalog {
+  display: flex;
+}
+
 .catalog-header__title {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -460,9 +475,9 @@ img {
   line-height: 58px;
 }
 
-.catalog-header__breadcrumbs.breadcrumbs {
+.catalog-header__breadcrumbs {
   list-style: none;
-  position: relative;
+  display: flex;
 }
 
 .breadcrumbs__item a {
@@ -471,20 +486,22 @@ img {
   font-size: 14px;
   line-height: 19px;
   opacity: 0.3;
+  margin-left: 10px;
 }
 
-/*TODO замечание с прошлого камита. так пока и не понял как это убрать
-либо кнопки вперед назад выносить из общего списка с цифрами
-*/
-.breadcrumbs__item--next a:hover {
+.breadcrumbs__item {
+  position: relative;
+}
+
+.breadcrumbs__item:not(:last-child) a:hover {
   opacity: 0.6;
 }
 
-.breadcrumbs__item--next a:focus {
+.breadcrumbs__item:not(:last-child) a:focus {
   opacity: 0.1;
 }
 
-.breadcrumbs__item:not(:first-child)::before{
+.breadcrumbs__item:not(:first-child) span::before{
   content: "";
   display: block;
   position: absolute;
@@ -492,10 +509,13 @@ img {
   width: 6px;
   height: 6px;
   color: var(--basic-black);
+  top: 50%;
   border-top: 1px solid var(--basic-black);
   border-left: 1px solid var(--basic-black);
   transform: rotate(135deg);
 }
+
+
 
 .filters__title {
   background: var(--aditional-grey);
@@ -512,6 +532,7 @@ img {
 
 .catalog__options {
   background: var(--basic-light-grey);
+  display: flex;
 }
 
 .catalog-options__title {
@@ -525,10 +546,13 @@ img {
 
 .catalog-options__list {
   list-style: none;
+  display: flex;
 }
 
 .catalog-options__rows {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .catalog-options__rows a:hover {
@@ -539,7 +563,7 @@ img {
   opacity: 1;
 }
 
-.catalog-options__up {
+.catalog-options__row--up {
   display: block;
   width: 0;
   height: 0;
@@ -549,7 +573,7 @@ img {
   opacity: 0.2;
 }
 
-.catalog-options__down {
+.catalog-options__row--down {
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -572,12 +596,19 @@ img {
   opacity: 1;
 }
 
-.catalog-options__item.catalog-options__item--active a {
+.catalog-options__item--active a {
+  opacity: 1;
+}
+
+.catalog-options__item--active a:hover {
   opacity: 1;
 }
 
 .catalog__list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
 }
 
 .catalog-item__stuff {
@@ -602,6 +633,9 @@ img {
   transition: opacity 0.5s;
 }
 
+.catalog-item__info {
+  display: flex;
+}
 
 .catalog-item__title a {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -626,6 +660,7 @@ img {
 
 .pagination__list {
   list-style: none;
+  display: flex;
 }
 
 .pagination__item a {
@@ -638,23 +673,39 @@ img {
   color: inherit;
 }
 
-.pagination__item--noactive a {
+.pagination__item a {
   opacity: 0.3;
 }
 
-.pagination__item--noactive a:hover {
+.pagination__item a:hover {
   opacity: 0.6;
 }
 
-.pagination__item--noactive a:focus {
+.pagination__item a:focus {
   opacity: 1;
 }
 
-.pagination__item--next:hover {
+.pagination__item--current a{
+  opacity: 1;
+}
+
+.pagination__item--current a:hover{
+  opacity: 1;
+}
+
+.pagination__item:last-child a{
+  opacity: 1;
+}
+
+.pagination__item:first-child a{
+  opacity: 1;
+}
+
+.pagination__item:last-child:hover {
   background: var(--additional-dark-grey);
 }
 
-.pagination__item--next a:focus {
+.pagination__item:last-child a:focus {
   opacity: 0.3;
 }
 
@@ -714,6 +765,10 @@ img {
   background: var(--basic-dark-grey);
 }
 
+.footer__row {
+  display: flex;
+}
+
 .footer__logo a:hover {
   opacity: 0.6;
 }
@@ -724,14 +779,13 @@ img {
 
 .footer__panel {
   list-style: none;
+  display: flex;
 }
 
 .footer-panel__item a {
   color: var(--basic-white);
   opacity: 0.7;
 }
-
-/**TODO тут у итемов у текста и иконок разные opacity. сейчас сделаны одинаковые*/
 
 .footer-panel__item a:hover {
   opacity: 1;
@@ -765,6 +819,7 @@ img {
 
 .footer-navigation__list {
   list-style: none;
+  display: flex;
 }
 
 .footer-navigation__item a {

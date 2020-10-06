@@ -11,74 +11,71 @@
 <body class="page__body">
   <!--HEADER-->
   <header class="header">
-    <div class="container">
+    <div class="container container--yellow">
       <div class="header__logo">
         <a href="index.html">
           <svg width="163" height="35">
-            <use xlink:href="img/words-sprite.svg#logo"></use>
+            <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
         </a>
       </div>
-      <div class="header__row header-row">
-        <div class="header-row__search">
-          <div>
-            <svg width="16" height="16">
-              <use xlink:href="img/add-info-sprite.svg#search"></use>
-            </svg>
-            <div>
-              <input type="text" placeholder="Поиск по сайту">
-            </div>
-            <ul class="header-row__panel user-panel">
-              <li class="user-panel__item">
-                <a href="#">
-                  <svg width="13" height="14">
-                    <use xlink:href="img/add-info-sprite.svg#user"></use>
-                  </svg>
-                  Войти
-                </a>
-              </li>
-              <li class="user-panel__item">
-                <a href="#">
-                  <svg width="14" height="14">
-                    <use xlink:href="img/add-info-sprite.svg#compare"></use>
-                  </svg>
-                  Сравнить
-                </a>
-              </li>
-              <li class="user-panel__item">
-                <a href="#">
-                  <svg width="10" height="10">
-                    <use xlink:href="img/add-info-sprite.svg#trush"></use>
-                  </svg>
-                  Корзина
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="header__row">
-            <nav class="header__navigation header-navigation">
-              <div class="header-navigation__menu">
-                <a href="catalog.html">Каталог товаров</a>
-                <div>
-                  <svg width="22" height="22">
-                    <use xlink:href="img/add-info-sprite.svg#plus"></use>
-                  </svg>
-                </div>
-              </div>
-              <ul class="header-navigation__list">
-                <li class="header-navigation__item">
-                  <a href="#">Доставка</a>
-                </li>
-                <li class="header-navigation__item">
-                  <a href="#">Гарантия</a>
-                </li>
-                <li class="header-navigation__item">
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+      <div class="header__row">
+        <svg width="16" height="16">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+        <div>
+          <input type="text" placeholder="Поиск по сайту">
         </div>
+        <ul class="header-row__panel user-panel">
+          <li class="user-panel__item">
+            <a href="#">
+              <svg width="13" height="14">
+                <use xlink:href="img/sprite.svg#user"></use>
+              </svg>
+              Войти
+            </a>
+          </li>
+          <li class="user-panel__item">
+            <a href="#">
+              <svg width="14" height="14">
+                <use xlink:href="img/sprite.svg#compare"></use>
+              </svg>
+              Сравнить
+            </a>
+          </li>
+          <li class="user-panel__item">
+            <a href="#">
+              <svg width="10" height="10">
+                <use xlink:href="img/sprite.svg#trush"></use>
+              </svg>
+              Корзина
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__row">
+        <nav class="header__navigation header-navigation">
+          <div class="header-navigation__menu">
+            <a href="catalog.html">Каталог товаров
+              <span>
+                <svg width="22" height="22">
+                  <use xlink:href="img/sprite.svg#plus"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <ul class="header-navigation__list">
+            <li class="header-navigation__item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="header-navigation__item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="header-navigation__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -351,40 +348,42 @@
     </section>
     <section class="main__section info">
       <div class="container">
-        <!--Этот заголовк не входит в макет. нужно скрыть-->
-        <h2 class="info__title visually-hidden">Информация</h2>
-        <div class="info__about info-about">
-          <h3 class="info-about__title">О нас</h3>
-          <p class="info-abount__text">
-            Огромный выбор гаджетов не оставит равнодушным гика,
-            который есть в каждом из нас.
-          </p>
-          <p class="info-abount__text">
-            Мы можем доставить ваш товар в самые отдаленные точки
-            России! DEVICE работает со многими транспортными компаниями:
-          </p>
-          <ul class="info-about__list">
-            <li class="info-about__item">Деловые линии</li>
-            <li class="info-about__item">Автотрейдинг</li>
-            <li class="info-about__item">ЖелДорЭкспедиция</li>
-          </ul>
-          <a href="#" class="info-about__more">
-            <span>Подробнее о нас</span>
-          </a>
-        </div>
-        <div class="info__contact info-contact">
-          <h3 class="info-contact__title">Контакты</h3>
-          <p class="info-contact__text">
-            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
-            проверить работоспособность покупки. Всякое бывает
-          </p>
-          <!--Карта-->
-          <div class="info-contact__map">
-            <img src="img/map.jpg" width="560" height="222" alt="Мы на карте">
+        <div class="info__wrapper">
+          <!--Этот заголовк не входит в макет. нужно скрыть-->
+          <h2 class="info__title visually-hidden">Информация</h2>
+          <div class="info__about info-about">
+            <h3 class="info-about__title">О нас</h3>
+            <p class="info-abount__text">
+              Огромный выбор гаджетов не оставит равнодушным гика,
+              который есть в каждом из нас.
+            </p>
+            <p class="info-abount__text">
+              Мы можем доставить ваш товар в самые отдаленные точки
+              России! DEVICE работает со многими транспортными компаниями:
+            </p>
+            <ul class="info-about__list">
+              <li class="info-about__item">Деловые линии</li>
+              <li class="info-about__item">Автотрейдинг</li>
+              <li class="info-about__item">ЖелДорЭкспедиция</li>
+            </ul>
+            <a href="#" class="info-about__more">
+              <span>Подробнее о нас</span>
+            </a>
           </div>
-          <a href="#" class="info-contact__letter">
-            <span>Напишите нам</span>
-          </a>
+          <div class="info__contact info-contact">
+            <h3 class="info-contact__title">Контакты</h3>
+            <p class="info-contact__text">
+              Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+              проверить работоспособность покупки. Всякое бывает
+            </p>
+            <!--Карта-->
+            <div class="info-contact__map">
+              <img src="img/map.jpg" width="560" height="222" alt="Мы на карте">
+            </div>
+            <a href="#" class="info-contact__letter">
+              <span>Напишите нам</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -396,7 +395,7 @@
         <div class="footer__logo">
           <a href="#">
             <svg width="163" height="35" fill="#f0c52e">
-              <use xlink:href="img/words-sprite.svg#logo"></use>
+              <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
           </a>
         </div>
@@ -404,7 +403,7 @@
           <li class="footer-panel__item">
             <a href="#">
               <svg width="13" height="14" fill="#f0c52e">
-                <use xlink:href="img/add-info-sprite.svg#user"></use>
+                <use xlink:href="img/sprite.svg#user"></use>
               </svg>
               Войти
             </a>
@@ -412,7 +411,7 @@
           <li class="footer-panel__item">
             <a href="#">
               <svg width="14" height="14" fill="#f0c52e">
-                <use xlink:href="img/add-info-sprite.svg#compare"></use>
+                <use xlink:href="img/sprite.svg#compare"></use>
               </svg>
               Сравнить
             </a>
@@ -420,7 +419,7 @@
           <li class="footer-panel__item">
             <a href="#">
               <svg width="10" height="10" fill="#f0c52e">
-                <use xlink:href="img/add-info-sprite.svg#trush"></use>
+                <use xlink:href="img/sprite.svg#trush"></use>
               </svg>
               Корзина
             </a>
@@ -449,21 +448,21 @@
           <li class="footer-socials__item">
             <a href="#">
               <svg width="32" height="32">
-                <use xlink:href="img/social-sprite.svg#facebook"></use>
+                <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
           </li>
           <li class="footer-socials__item">
             <a href="#">
               <svg width="32" height="32">
-                <use xlink:href="img/social-sprite.svg#instagram"></use>
+                <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </li>
           <li class="footer-socials__item">
             <a href="#">
               <svg width="32" height="32">
-                <use xlink:href="img/social-sprite.svg#instagram"></use>
+                <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </li>

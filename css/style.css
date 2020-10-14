@@ -90,7 +90,21 @@ img {
 
 /*Header style*/
 .container--yellow {
-  background: var(--additional-light-yellow);
+  background: linear-gradient(
+    to bottom,
+    var(--basic-white) 10%,
+    var(--additional-light-yellow) 10%,
+    var(--additional-light-yellow) 70%
+  );
+}
+
+.header .container {
+  width: 1040px;
+  padding: 0 60px;
+}
+
+.header__logo {
+  margin-bottom: 30px;
 }
 
 .header__logo a:hover {
@@ -103,11 +117,20 @@ img {
 
 .header__row {
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
 }
 
-.header__row input {
+.header__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__search input {
   border: none;
   background: var(--additional-light-yellow);
+  margin-left: 20px;
 }
 
 .header-row__search input::placeholder {
@@ -119,23 +142,39 @@ img {
   opacity: 0.6;
 }
 
-.header__navigation {
-  display: flex;
-}
-
 .header-row__panel,
 .header-navigation__list {
   list-style: none;
   display: flex;
   margin: 0;
+  padding: 0;
 }
 
 .header-row__panel a {
   color: var(--basic-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-navigation__menu {
+.header-row__panel svg {
+  margin-right: 15px;
+}
+
+.header-navigation__menu a {
   display: flex;
+}
+
+.header-navigation__menu span {
+  margin-left: 20px;
+}
+
+.header-navigation__item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.header-navigation__item:last-child {
+  margin-left: 110px;
 }
 
 .header-row__panel a:hover,
@@ -150,8 +189,16 @@ img {
   opacity: 0.3;
 }
 
+.user-panel__item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .user-panel__item--logout {
   opacity: 0.3;
+}
+
+.user-panel__item.user-panel__item--nologin {
+  margin-right: 210px;
 }
 
 .header-navigation__list a {
@@ -177,6 +224,11 @@ img {
 /*main styles*/
 
 /*slider*/
+
+.main__slider {
+  margin-bottom: 115px;
+}
+
 .slider__number {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -184,6 +236,24 @@ img {
   line-height: 219px;
   color: var(--basic-white);
   background: var(--additional-light-yellow);
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 60px;
+}
+
+.slider__wrapper {
+  padding: 0 60px;
+  display: flex;
+}
+
+.slider__panel {
+  margin-left: 120px;
+}
+
+.slider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .slider__logo {
@@ -225,7 +295,7 @@ img {
   transition: height 0.5s;
 }
 
-.slider__more:focus span{
+.slider__more:focus span {
   opacity: 0.3;
 }
 
@@ -235,6 +305,8 @@ img {
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
+  padding-right: 60px;
+  text-align: left;
 }
 
 .slider-table__row td {
@@ -243,6 +315,8 @@ img {
   font-size: 36px;
   line-height: 42px;
   letter-spacing: 0.1em;
+  padding-right: 60px;
+  text-align: left;
 }
 
 .slider__nav {
@@ -250,10 +324,23 @@ img {
   list-style: none;
 }
 
+.slider-nav__item {
+  margin-right: 20px;
+}
+
 .slider-nav__item a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 12px;
   height: 12px;
+  border-radius: 8px;
+  border: 1px var(--basic-black) solid;
+}
+
+.slider-nav__item--active div {
+  width: 6px;
+  height: 6px;
   border-radius: 8px;
   border: 1px var(--basic-black) solid;
 }
@@ -263,6 +350,8 @@ img {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 40px;
+  margin: 0 0 50px;
+  padding: 0;
 }
 
 .popular-item__title {
@@ -297,16 +386,29 @@ img {
   opacity: 0.3;
 }
 
-.services { 
+.services {
   background: var(--basic-light-grey);
 }
 
-.services__menu.services-menu {
+.services__wrapper {
+  display: flex;
+  padding-bottom: 130px;
+}
+
+.services__item {
+  display: flex;
+  margin-left: 120px;
+}
+
+.services__menu {
   list-style: none;
+  margin: 0;
+  padding: 0 115px 0 0;
 }
 
 .services-menu__item {
   width: max-content;
+  margin-bottom: 25px;
 }
 .services-menu__item span {
   position: relative;
@@ -353,9 +455,16 @@ img {
   letter-spacing: 0.1em;
 }
 
+.partners {
+  margin: 90px 0;
+}
+
 .main__partners {
-  display: flex;
+  display: grid;
   list-style: none;
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
 }
 
 .partners__logo {
@@ -369,6 +478,9 @@ img {
 }
 
 /*information*/
+.info {
+  margin-bottom: 80px;
+}
 
 .info__wrapper {
   display: grid;
@@ -387,15 +499,13 @@ img {
 .info-about__text,
 .info-contact__text {
   line-height: 28px;
+  margin-bottom: 40px;
 }
 
 .info-about__list {
   list-style: none;
-}
-
-.info-about__item {
-  position: relative;
-  padding-left: 40px;
+  padding: 0;
+  margin-bottom: 50px;
 }
 
 .info-about__item::before {
@@ -415,6 +525,12 @@ img {
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.info-about__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .info-about__more span {
@@ -425,6 +541,10 @@ img {
 .info-contact__letter span {
   position: relative;
   padding: 10px 40px;
+}
+
+.info-contact__map {
+  margin-bottom: 50px;
 }
 
 .info-about__more,
@@ -465,7 +585,47 @@ img {
 /*Catalogue styles*/
 
 .main__catalog {
+  background: linear-gradient(
+    to right,
+    var(--basic-light-grey) 50%,
+    var(--basic-light-grey) 50%,
+    var(--basic-white) 50%
+  );
+}
+
+.catalog__wrapper {
   display: flex;
+}
+
+.catalog__panel {
+  background: var(--basic-white);
+  padding-bottom: 80px;
+}
+
+.catalog__filters {
+  padding-top: 70px;
+}
+
+.filters-header {
+  background: linear-gradient(
+    to right,
+    var(--additional-dark-grey) 50%,
+    var(--additional-dark-grey) 50%,
+    var(--basic-light-grey) 50%
+  );
+}
+
+.filters-header__wrapper {
+  display: flex;
+}
+
+.catalog-header {
+  margin-bottom: 35px;
+}
+
+.catalog-header .container {
+  padding-left: 60px;
+  box-sizing: border-box;
 }
 
 .catalog-header__title {
@@ -478,6 +638,12 @@ img {
 .catalog-header__breadcrumbs {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  position: relative;
 }
 
 .breadcrumbs__item a {
@@ -486,11 +652,7 @@ img {
   font-size: 14px;
   line-height: 19px;
   opacity: 0.3;
-  margin-left: 10px;
-}
-
-.breadcrumbs__item {
-  position: relative;
+  margin: 0 10px;
 }
 
 .breadcrumbs__item:not(:last-child) a:hover {
@@ -501,38 +663,204 @@ img {
   opacity: 0.1;
 }
 
-.breadcrumbs__item:not(:first-child) span::before{
+.breadcrumbs__item:not(:last-child) span::after {
   content: "";
   display: block;
   position: absolute;
-  left: 0;
+  right: 0;
   width: 6px;
   height: 6px;
   color: var(--basic-black);
   top: 50%;
   border-top: 1px solid var(--basic-black);
   border-left: 1px solid var(--basic-black);
-  transform: rotate(135deg);
+  transform: rotate(135deg) translateY(25%);
 }
 
+.filters-header .container {
+  padding-left: 60px;
+  box-sizing: border-box;
+}
 
-
-.filters__title {
+.filters-header__title {
   background: var(--aditional-grey);
+  display: flex;
+  align-items: center;
+  min-width: 270px; /*TODO Поясни почему мне нужно тут ставить min.
+  я не понимаю, почему просто width не работает(ширина меньше 270 будет)*/
 }
 
-.filters__title h2 {
+.filters-header__title h2 {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin: 0;
 }
 
-.catalog__options {
+.filters__form {
+  width: 270px;
+}
+
+.filters__form fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.filters__form fieldset:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.filters__form legend {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.filters__form ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.filters__form li {
+  line-height: 19px;
+  font-size: 14px;
+}
+
+.filter-colors__item,
+.filter-bluetooth__item {
+  padding-left: 40px;
+}
+
+.filter-colors__item:not(:last-child),
+.filter-bluetooth__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.filter-colors__item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-colors__item input + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  transform: translateY(-25%);
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 2px;
+  border: 2px solid #000000;
+}
+
+.filter-colors__item input:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -38px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/sprite.svg#check"); /*TODO Почему тут не подключается картинка???(img/ - такой путь тоже не работает*/
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-bluetooth__item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-bluetooth__item input + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -1px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.filter-bluetooth__item input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -34px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.filters__button span {
+  position: relative;
+  padding: 10px 35px;
+} /*TODO не понимаю как тут с паддингами быть. чему-то эти игнорируются*/
+
+.filters__button {
+  color: inherit;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  position: relative;
+  border: none;
+  background: inherit;
+  padding: 0;
+}
+
+.filters__button::before {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 100%;
+  position: absolute; /*ЧТо не так с абсолютом? текст перекрывается фоном. хотя в других местах все ок*/
+  background: var(--additional-yellow);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filters__button:hover::before {
+  height: 100%;
+  transition: height 0.5s;
+}
+
+.filters__button:focus {
+  border: none; /*Почему не работает??? при нажатии на кнопку появляется бордер*/
+}
+
+.filters__button:focus span {
+  opacity: 0.3;
+}
+/**/
+
+.filters-header__options {
   background: var(--basic-light-grey);
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px 0 25px 70px;
+  box-sizing: border-box;
+}
+
+.catalog .container {
+  padding-left: 60px;
+  box-sizing: border-box;
 }
 
 .catalog-options__title {
@@ -542,11 +870,14 @@ img {
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog-options__list {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-options__rows {
@@ -563,22 +894,33 @@ img {
   opacity: 1;
 }
 
-.catalog-options__row--up {
+.catalog-options__arrow {
   display: block;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 11px solid var(--basic-black);
   opacity: 0.2;
 }
 
-.catalog-options__row--down {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+.catalog-options__arrow:first-child {
+  margin-right: 20px;
+}
+
+.catalog-options__arrow--up {
+  border-bottom: 11px solid var(--basic-black);
+}
+
+.catalog-options__arrow--down {
   border-top: 11px solid var(--basic-black);
+}
+
+.catalog-options__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.catalog-options__arrow--active {
+  opacity: 1;
 }
 
 .catalog-options__item a {
@@ -609,10 +951,14 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
+  row-gap: 45px;
+  margin: 0;
+  padding: 40px 0 0 70px;
 }
 
 .catalog-item__stuff {
   position: relative;
+  margin-bottom: 35px;
 }
 
 .catalog-item__menu {
@@ -635,6 +981,11 @@ img {
 
 .catalog-item__info {
   display: flex;
+  align-items: center;
+}
+
+.catalog-item__title {
+  margin: 0;
 }
 
 .catalog-item__title a {
@@ -652,16 +1003,34 @@ img {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.05em;
+  margin: 0;
 }
 
 .catalog__pagination {
   background: var(--basic-light-grey);
+  margin-left: 70px;
+  margin-top: 50px;
 }
 
 .pagination__list {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 25px 30px;
 }
+
+.pagination__item:first-child {
+  flex-grow: 1;
+}
+
+.pagination__item:nth-last-child(2) {
+  flex-grow: 1;
+}
+
+.pagination__item:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
+  margin-right: 25px; /*TODO как упростить? кажется слишком сложный сделал*/
+}
+
 
 .pagination__item a {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -685,19 +1054,19 @@ img {
   opacity: 1;
 }
 
-.pagination__item--current a{
+.pagination__item--current a {
   opacity: 1;
 }
 
-.pagination__item--current a:hover{
+.pagination__item--current a:hover {
   opacity: 1;
 }
 
-.pagination__item:last-child a{
+.pagination__item:last-child a {
   opacity: 1;
 }
 
-.pagination__item:first-child a{
+.pagination__item:first-child a {
   opacity: 1;
 }
 
@@ -707,6 +1076,10 @@ img {
 
 .pagination__item:last-child a:focus {
   opacity: 0.3;
+}
+
+.item-menu__adding {
+  margin-bottom: 20px;
 }
 
 .item-menu__adding span {
@@ -762,11 +1135,14 @@ img {
 
 /*footer styles*/
 .footer {
+  padding-top: 60px;
   background: var(--basic-dark-grey);
 }
 
 .footer__row {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__logo a:hover {
@@ -780,11 +1156,18 @@ img {
 .footer__panel {
   list-style: none;
   display: flex;
+  padding: 0;
+}
+
+.footer-panel__item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .footer-panel__item a {
   color: var(--basic-white);
   opacity: 0.7;
+  display: flex;
+  align-items: center;
 }
 
 .footer-panel__item a:hover {
@@ -795,14 +1178,31 @@ img {
   opacity: 0.3;
 }
 
+.footer-panel__item svg {
+  margin-right: 15px;
+}
+
 .footer__address {
   color: var(--basic-white);
   font-style: normal;
+  display: flex;
+  align-items: center;
+}
+
+.footer__line {
+  width: 80px;
+  height: 10px;
+  background: var(--additional-yellow);
 }
 
 .footer__socials {
   display: flex;
   list-style: none;
+  padding: 0;
+}
+
+.footer-socials__item:not(:last-child) {
+  margin-right: 15px;
 }
 
 .footer-socials__item a {
@@ -820,6 +1220,11 @@ img {
 .footer-navigation__list {
   list-style: none;
   display: flex;
+  padding: 0;
+}
+
+.footer-navigation__item:not(:last-child) {
+  margin-right: 35px;
 }
 
 .footer-navigation__item a {
@@ -842,6 +1247,8 @@ img {
 
 .footer__tel {
   color: var(--basic-white);
+  display: flex;
+  align-items: center;
 }
 
 .footer__academy:hover {

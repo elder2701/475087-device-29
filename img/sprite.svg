@@ -69,4 +69,12 @@
       fill-opacity="0.3" 
     />
   </symbol>
+  <symbol id="check" viewBox="0 0 14 11">
+    <path 
+      fill-rule="evenodd" 
+      clip-rule="evenodd" 
+      d="M2.07683 3.75L0.384521 5.5L5.46144 10.75L13.923 2L12.2307 0.25L5.46144 7.25L2.07683 3.75Z" 
+      fill="black"
+    />
+  </symbol>
 </svg>

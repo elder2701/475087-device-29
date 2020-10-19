@@ -1,145 +1,149 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>HTML Academy: Девайс</title>
-  <link href="css/normalize.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
-</head>
-
-<body class="page__body">
-  <!--HEADER-->
-  <header class="header">
-    <div class="container container--yellow">
-      <div class="header__logo">
-        <a href="index.html">
-          <svg width="163" height="35">
-            <use xlink:href="img/sprite.svg#logo"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="header__row">
-        <div class="header__search">
-          <svg width="16" height="16">
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
-          <input type="text" placeholder="Поиск по сайту" />
+  <body class="page__body">
+    <!--HEADER-->
+    <header class="header">
+      <div class="container container--yellow">
+        <div class="header__logo">
+          <a href="index.html">
+            <svg width="163" height="35">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
         </div>
-        <ul class="header-row__panel user-panel">
-          <li class="user-panel__item user-panel__item--nologin">
-            <a href="#">
-              <svg width="13" height="14">
-                <use xlink:href="img/sprite.svg#user"></use>
-              </svg>
-              Войти
-            </a>
-          </li>
-          <li class="user-panel__item">
-            <a href="#">
-              <svg width="14" height="14">
-                <use xlink:href="img/sprite.svg#compare"></use>
-              </svg>
-              Сравнить
-            </a>
-          </li>
-          <li class="user-panel__item">
-            <a href="#">
-              <svg width="10" height="10">
-                <use xlink:href="img/sprite.svg#trush"></use>
-              </svg>
-              Корзина
-            </a>
-          </li>
-        </ul>
-      </div>
-      <nav class="header__row header-navigation">
-        <div class="header-navigation__menu">
-          <a href="catalog.html">Каталог товаров
-            <span>
+        <div class="header__row">
+          <div class="header__search search">
+            <svg width="16" height="16">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+            <input class="search__input" type="text" placeholder="Поиск по сайту" />
+            <button class="search__button">Найти</button>
+          </div>
+          <ul class="header-row__panel user-panel">
+            <li class="user-panel__item user-panel__item--login">
+              <a href="#">
+                <svg width="13" height="14">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                Войти
+              </a>
+            </li>
+            <li class="user-panel__item">
+              <a href="#">
+                <svg width="14" height="14">
+                  <use xlink:href="img/sprite.svg#compare"></use>
+                </svg>
+                Сравнить
+              </a>
+            </li>
+            <li class="user-panel__item">
+              <a href="#">
+                <svg width="10" height="10">
+                  <use xlink:href="img/sprite.svg#trush"></use>
+                </svg>
+                Корзина
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="header__row header-navigation">
+          <div class="header-navigation__menu">
+            <a href="catalog.html"
+              >Каталог товаров
               <svg width="22" height="22">
                 <use xlink:href="img/sprite.svg#plus"></use>
               </svg>
-            </span>
-          </a>
-        </div>
-        <ul class="header-navigation__list">
-          <li class="header-navigation__item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="header-navigation__item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="header-navigation__item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!--MAIN-->
-  <main class="main">
-    <!--Зоголовк необходимо скрыть. не входит в макет-->
-    <h1 class="main__title visually-hidden">Device</h1>
-    <section class="main__section">
-      <div class="container">
-        <div class="main__slider slider">
-          <div class="slider__item">
-            <h2 class="slider__title visually-hidden">Горячие предложения</h2>
-            <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
-            <div class="slider__number">
-              <span>01</span>
-            </div>
-            <div class="slider__wrapper">
-              <div class="slider__pic">
-                <img src="img/slider-1.jpg" width="384" height="486" alt="Самая длинная селфи-палка" />
-              </div>
-              <div class="slider__panel">
-                <p class="slider__logo">Делай Селфи, как Бен Стиллер</p>
-                <p class="slider__text">
-                  Самая длинная палка для селфи доступна в нашем магазине.
-                  Восемь (Восемь, Карл!) метров длиной и весом всего 5
-                  килограмм.
-                </p>
-
-                <div class="slider__controls">
-                  <a href="#" class="slider__more">
-                    <span>Подробнее</span>
-                  </a>
-                  <ul class="slider__nav slider-nav">
-                    <li class="slider-nav__item">
-                      <a href="#">
-                        <div></div>
-                      </a>
-                    </li>
-                    <li class="slider-nav__item slider-nav__item--active">
-                      <a href="#">
-                        <div></div>
-                      </a>
-                    </li>
-                    <li class="slider-nav__item">
-                      <a href="#">
-                        <div></div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <table class="slider__table slider-table">
-                  <tr class="slider-table__row">
-                    <td>8,5 м</td>
-                    <td>5 кг</td>
-                    <td>Карбон</td>
-                  </tr>
-                  <tr class="slider-table__row">
-                    <th>Длина палки</th>
-                    <th>Вес палки</th>
-                    <th>Материал</th>
-                  </tr>
-                </table>
-              </div>
-            </div>
+            </a>
           </div>
-        <!--  <div class="slider__item">
+          <ul class="header-navigation__list">
+            <li class="header-navigation__item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="header-navigation__item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="header-navigation__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--MAIN-->
+    <main class="main">
+      <!--Зоголовк необходимо скрыть. не входит в макет-->
+      <h1 class="main__title visually-hidden">Device</h1>
+      <section class="main__section">
+        <div class="container">
+          <div class="main__slider slider">
+            <div class="slider__item">
+              <h2 class="slider__title visually-hidden">Горячие предложения</h2>
+              <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
+              <div class="slider__number">
+                <span>01</span>
+              </div>
+              <div class="slider__wrapper">
+                <div class="slider__pic">
+                  <img
+                    src="img/slider-1.jpg"
+                    width="384"
+                    height="486"
+                    alt="Самая длинная селфи-палка"
+                  />
+                </div>
+                <div class="slider__panel">
+                  <p class="slider__logo">Делай Селфи, как Бен Стиллер</p>
+                  <p class="slider__text">
+                    Самая длинная палка для селфи доступна в нашем магазине.
+                    Восемь (Восемь, Карл!) метров длиной и весом всего 5
+                    килограмм.
+                  </p>
+
+                  <div class="slider__controls">
+                    <a href="#" class="slider__more">
+                      <span>Подробнее</span>
+                    </a>
+                    <ul class="slider__nav slider-nav">
+                      <li class="slider-nav__item">
+                        <a href="#">
+                          <div></div>
+                        </a>
+                      </li>
+                      <li class="slider-nav__item slider-nav__item--active">
+                        <a href="#">
+                          <div></div>
+                        </a>
+                      </li>
+                      <li class="slider-nav__item">
+                        <a href="#">
+                          <div></div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <table class="slider__table slider-table">
+                    <tr class="slider-table__row">
+                      <td>8,5 м</td>
+                      <td>5 кг</td>
+                      <td>Карбон</td>
+                    </tr>
+                    <tr class="slider-table__row">
+                      <th>Длина палки</th>
+                      <th>Вес палки</th>
+                      <th>Материал</th>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!--  <div class="slider__item">
             <h2 class="slider__title visually-hidden">Горячие предложения</h2>
             <div class="slider__number">
               <span>02</span>
@@ -227,66 +231,93 @@
               </div>
             </div>
           </div>-->
+          </div>
+          <ul class="main__popular main-popular">
+            <li class="main-popular__item popular-item">
+              <a href="#" class="popular-item__link">
+                <div class="popular-item__pic">
+                  <img
+                    src="img/popular-1.png"
+                    width="97"
+                    height="55"
+                    alt="Виртуальная реальность"
+                  />
+                </div>
+                <h3 class="popular-item__title">Виртуальная рельность</h3>
+              </a>
+            </li>
+            <li class="main-popular__item popular-item">
+              <a href="#" class="popular-item__link">
+                <div class="popular-item__pic">
+                  <img
+                    src="img/popular-2.png"
+                    width="86"
+                    height="117"
+                    alt="Моноподы для селфи"
+                  />
+                </div>
+                <h3 class="popular-item__title">Моноподы для селфи</h3>
+              </a>
+            </li>
+            <li class="main-popular__item popular-item">
+              <a href="#" class="popular-item__link">
+                <div class="popular-item__pic">
+                  <img
+                    src="img/popular-3.png"
+                    width="71"
+                    height="87"
+                    alt="Экшен-камеры"
+                  />
+                </div>
+                <h3 class="popular-item__title">Экшен-камеры</h3>
+              </a>
+            </li>
+            <li class="main-popular__item popular-item">
+              <a href="#" class="popular-item__link">
+                <div class="popular-item__pic">
+                  <img
+                    src="img/popular-4.png"
+                    width="107"
+                    height="65"
+                    alt="Фитнес-браслеты"
+                  />
+                </div>
+                <h3 class="popular-item__title">Фитнес-браслеты</h3>
+              </a>
+            </li>
+            <li class="main-popular__item popular-item">
+              <a href="#" class="popular-item__link">
+                <div class="popular-item__pic">
+                  <img
+                    src="img/popular-5.png"
+                    width="56"
+                    height="98"
+                    alt="Умные часы"
+                  />
+                </div>
+                <h3 class="popular-item__title">Умные часы</h3>
+              </a>
+            </li>
+            <li class="main-popular__item popular-item">
+              <a href="#" class="popular-item__link">
+                <div class="popular-item__pic">
+                  <img
+                    src="img/popular-6.png"
+                    width="132"
+                    height="69"
+                    alt="Квадрокоптеры"
+                  />
+                </div>
+                <h3 class="popular-item__title">Квадрокоптеры</h3>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="main__popular main-popular">
-          <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-1.png" width="97" height="55" alt="Виртуальная реальность" />
-              </div>
-              <h3 class="popular-item__title">Виртуальная рельность</h3>
-            </a>
-          </li>
-          <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи" />
-              </div>
-              <h3 class="popular-item__title">Моноподы для селфи</h3>
-            </a>
-          </li>
-          <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-3.png" width="71" height="87" alt="Экшен-камеры" />
-              </div>
-              <h3 class="popular-item__title">Экшен-камеры</h3>
-            </a>
-          </li>
-          <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-4.png" width="107" height="65" alt="Фитнес-браслеты" />
-              </div>
-              <h3 class="popular-item__title">Фитнес-браслеты</h3>
-            </a>
-          </li>
-          <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-5.png" width="56" height="98" alt="Умные часы" />
-              </div>
-              <h3 class="popular-item__title">Умные часы</h3>
-            </a>
-          </li>
-          <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-6.png" width="132" height="69" alt="Квадрокоптеры" />
-              </div>
-              <h3 class="popular-item__title">Квадрокоптеры</h3>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="main__section services">
-      <div class="container">
-        <div class="services__wrapper">
+      </section>
+      <section class="main__section services">
+        <div class="container services__wrapper">
           <!--Этот заголовок не входит в макет. Необходимо скрывать-->
-          <h2 class="services__title visually-hidden">
-            Дополнительные услуги
-          </h2>
+          <h2 class="services__title visually-hidden">Дополнительные услуги</h2>
           <ul class="services__menu services-menu">
             <li class="services-menu__item">
               <a href="#">
@@ -314,10 +345,15 @@
               </p>
             </div>
             <div class="services-item__logo">
-              <img src="img/delivery.png" width="136" height="164" alt="Доставка" />
+              <img
+                src="img/delivery.png"
+                width="136"
+                height="164"
+                alt="Доставка"
+              />
             </div>
           </div>
-       <!--   <div class="services__item services-item">
+          <!--   <div class="services__item services-item">
             <div class="services-item__info">
               <span class="services-item__title">Гарантия</span>
               <p class="services-item__text">
@@ -344,50 +380,68 @@
             </div>
           </div>-->
         </div>
-      </div>
-    </section>
-    <section class="main__section partners">
-      <!--TODO Из за центровки, и то что этот блок не получилось вынести в grid
+      </section>
+      <section class="main__section partners">
+        <!--TODO Из за центровки, и то что этот блок не получилось вынести в grid
         ,тут совсем не понятно как расстояние между блоками распределить, видимо подгонять придется, 
         пришлось этот блок вынести в отдельную секцию
       -->
-      <!--Этот заголовк не входит в макет. нужно скрыть-->
-      <h2 class="partners__title visually-hidden">Партнеры</h2>
-      <div class="container">
-        <ul class="main__partners partners">
-          <li class="partners__item">
-            <a class="partners__logo" href="#">
-              <img src="img/partner-1.jpg" width="260" height="100" alt="Партнер DJI" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a class="partners__logo" href="#">
-              <img src="img/partner-2.jpg" width="260" height="100" alt="Партнер SP Adgets" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a class="partners__logo" href="#">
-              <img src="img/partner-3.jpg" width="260" height="100" alt="Партнер GoPro" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a class="partners__logo" href="#">
-              <img src="img/partner-4.jpg" width="260" height="100" alt="Партнер Vive" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="main__section info">
-      <div class="container">
-        <div class="info__wrapper">
+        <!--Этот заголовк не входит в макет. нужно скрыть-->
+        <h2 class="partners__title visually-hidden">Партнеры</h2>
+        <div class="container">
+          <ul class="main__partners partners">
+            <li class="partners__item">
+              <a class="partners__logo" href="#">
+                <img
+                  src="img/partner-1.jpg"
+                  width="260"
+                  height="100"
+                  alt="Партнер DJI"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__logo" href="#">
+                <img
+                  src="img/partner-2.jpg"
+                  width="260"
+                  height="100"
+                  alt="Партнер SP Adgets"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__logo" href="#">
+                <img
+                  src="img/partner-3.jpg"
+                  width="260"
+                  height="100"
+                  alt="Партнер GoPro"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__logo" href="#">
+                <img
+                  src="img/partner-4.jpg"
+                  width="260"
+                  height="100"
+                  alt="Партнер Vive"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="main__section info">
+        <div class="container info__wrapper">
           <!--Этот заголовк не входит в макет. нужно скрыть-->
           <h2 class="info__title visually-hidden">Информация</h2>
           <div class="info__about info-about">
             <h3 class="info-about__title">О нас</h3>
             <p class="info-about__text">
-              Огромный выбор гаджетов не оставит равнодушным гика, который
-              есть в каждом из нас.
+              Огромный выбор гаджетов не оставит равнодушным гика, который есть
+              в каждом из нас.
             </p>
             <p class="info-about__text">
               Мы можем доставить ваш товар в самые отдаленные точки России!
@@ -410,104 +464,110 @@
             </p>
             <!--Карта-->
             <div class="info-contact__map">
-              <img src="img/map.jpg" width="560" height="222" alt="Мы на карте" />
+              <img
+                src="img/map.jpg"
+                width="560"
+                height="222"
+                alt="Мы на карте"
+              />
             </div>
             <a href="#" class="info-contact__letter">
               <span>Напишите нам</span>
             </a>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <!--FOOTER-->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__row">
-        <div class="footer__logo">
-          <a href="#">
-            <svg width="163" height="35" fill="#f0c52e">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-        </div>
-        <ul class="footer__panel footer-panel">
-          <li class="footer-panel__item">
+      </section>
+    </main>
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__logo">
             <a href="#">
-              <svg width="13" height="14" fill="#f0c52e">
-                <use xlink:href="img/sprite.svg#user"></use>
+              <svg width="163" height="35" fill="#f0c52e">
+                <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
-              Войти
             </a>
-          </li>
-          <li class="footer-panel__item">
-            <a href="#">
-              <svg width="14" height="14" fill="#f0c52e">
-                <use xlink:href="img/sprite.svg#compare"></use>
-              </svg>
-              Сравнить
-            </a>
-          </li>
-          <li class="footer-panel__item">
-            <a href="#">
-              <svg width="10" height="10" fill="#f0c52e">
-                <use xlink:href="img/sprite.svg#trush"></use>
-              </svg>
-              Корзина
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__row">
-        <address class="footer__address">
-          г. Москва, ул. Строителей, 15
-        </address>
-        <nav class="footer__navigation footer-navigation">
-          <ul class="footer-navigation__list">
-            <li class="footer-navigation__item">
-              <a href="#">Доставка</a>
+          </div>
+          <ul class="footer__panel footer-panel">
+            <li class="footer-panel__item">
+              <a href="#">
+                <svg width="13" height="14" fill="#f0c52e">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                Войти
+              </a>
             </li>
-            <li class="footer-navigation__item">
-              <a href="#">Гарантия</a>
+            <li class="footer-panel__item">
+              <a href="#">
+                <svg width="14" height="14" fill="#f0c52e">
+                  <use xlink:href="img/sprite.svg#compare"></use>
+                </svg>
+                Сравнить
+              </a>
             </li>
-            <li class="footer-navigation__item">
-              <a href="#">Контакты</a>
+            <li class="footer-panel__item">
+              <a href="#">
+                <svg width="10" height="10" fill="#f0c52e">
+                  <use xlink:href="img/sprite.svg#trush"></use>
+                </svg>
+                Корзина
+              </a>
             </li>
           </ul>
-        </nav>
-        <a class="footer__tel" href="tel:+74954959595">+7 (495) 495-95-95 </a>
+        </div>
+        <div class="footer__row">
+          <address class="footer__address">
+            г. Москва, ул. Строителей, 15
+          </address>
+          <nav class="footer__navigation footer-navigation">
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#">Гарантия</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="footer__tel" href="tel:+74954959595">+7 (495) 495-95-95 </a>
+        </div>
+        <div class="footer__row">
+          <div class="footer__line"></div>
+          <ul class="footer__socials footer-socials">
+            <li class="footer-socials__item">
+              <a href="#">
+                <svg width="32" height="32">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a href="#">
+                <svg width="32" height="32">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a href="#">
+                <svg width="32" height="32">
+                  <use xlink:href="img/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a
+            class="footer__academy"
+            href="https://htmlacademy.ru/intensive/htmlcss"
+          >
+            <img src="img/logo-academy.png" alt="Академия" />
+          </a>
+        </div>
       </div>
-      <div class="footer__row">
-        <div class="footer__line"></div>
-        <ul class="footer__socials footer-socials">
-          <li class="footer-socials__item">
-            <a href="#">
-              <svg width="32" height="32">
-                <use xlink:href="img/sprite.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer-socials__item">
-            <a href="#">
-              <svg width="32" height="32">
-                <use xlink:href="img/sprite.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer-socials__item">
-            <a href="#">
-              <svg width="32" height="32">
-                <use xlink:href="img/sprite.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <a class="footer__academy" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-academy.png" alt="Академия" />
-        </a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

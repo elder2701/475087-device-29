@@ -32,6 +32,8 @@
   --basic-light-grey: #e5e5e5;
   --basic-white: #ffffff;
 
+  --additional-opacity-white: rgba(255,255,255,0.3);
+
   --additional-yellow: #f0c52e;
   --additional-light-yellow: #f7e296;
   --additional-green: #91c92f;
@@ -40,6 +42,12 @@
   --aditional-light-grey: #eeeeee;
 
   --status-pink: #f6dada;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .page {
@@ -125,21 +133,59 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.header__search input {
+.search__input {
   border: none;
   background: var(--additional-light-yellow);
   margin-left: 20px;
+  outline: none;
 }
 
-.header-row__search input::placeholder {
+.search__input::placeholder {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.header-row__search input:hover::placeholder {
+.search__input:hover::placeholder {
   opacity: 0.6;
+}
+
+.search__input:focus ~ .search__line::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 211px;
+  left: 0;
+  bottom: 0;
+  background: var(--basic-black);
+  position: absolute;
+
+}
+
+.search__input:focus ~ .search__button {
+  display: block;
+}
+
+.search__button{
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 2px solid var(--basic-black);
+  padding: 5px;
+  text-transform: uppercase;
+  background: inherit;
+  display: none;
+}
+
+.search__button:hover {
+  background: var(--basic-black);
+  color: var(--basic-white);
+}
+
+.search__button:active {
+  color: var(--additional-opacity-white);
 }
 
 .header-row__panel,
@@ -165,7 +211,7 @@ img {
   display: flex;
 }
 
-.header-navigation__menu span {
+.header-navigation__menu svg {
   margin-left: 20px;
 }
 
@@ -194,11 +240,16 @@ img {
 }
 
 .user-panel__item--logout {
-  opacity: 0.3;
+  display: flex;
 }
 
-.user-panel__item.user-panel__item--nologin {
-  margin-right: 210px;
+.user-panel__item--logout  .user-panel__link:last-child{
+  opacity: 0.3;
+  margin-left: 40px;
+}
+
+.user-panel__item--login {
+  min-width: 430px;
 }
 
 .header-navigation__list a {
@@ -224,6 +275,10 @@ img {
 /*main styles*/
 
 /*slider*/
+
+.main__section .container {
+  padding: 0 60px;
+}
 
 .main__slider {
   margin-bottom: 115px;
@@ -485,6 +540,21 @@ img {
 .info__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 130px;
+}
+
+.info-about, .info-contact {
+  position: relative;
+}
+
+.info-about::before, .info-contact::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  width: 80px;
+  height: 7px;
+  background: var(--basic-black);
 }
 
 .info-about__title,
@@ -625,7 +695,6 @@ img {
 
 .catalog-header .container {
   padding-left: 60px;
-  box-sizing: border-box;
 }
 
 .catalog-header__title {
@@ -679,7 +748,6 @@ img {
 
 .filters-header .container {
   padding-left: 60px;
-  box-sizing: border-box;
 }
 
 .filters-header__title {
@@ -709,6 +777,17 @@ img {
   margin: 0;
   margin-bottom: 30px;
   border: none;
+  position: relative;
+}
+
+.filters__form fieldset::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 200px;
+  background: var(--basic-black);
+  top: -10px;
 }
 
 .filters__form fieldset:not(:last-child) {
@@ -722,6 +801,67 @@ img {
   line-height: 17px;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
+}
+
+.filter-price__range {
+  position: relative;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.range__scale {
+  height: 2px;
+  background-color: var(--basic-black);
+  opacity: 0.2;
+}
+
+.range__bar {
+  height: 2px;
+  width: 120px;
+  background-color: var(--additional-green);
+}
+
+.range__toggle {
+  box-sizing: content-box;
+  position: absolute;
+  top: -16px;
+  width: 4px;
+  height: 4px;
+  border: 16px solid var(--basic-white);
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+}
+
+.range__toggle--min {
+  left: -2px;
+}
+
+.range__toggle--max {
+  left: 112px;
+}
+
+.price__control {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.price__control input[type="text"] {
+  font-family: "Gilroy", "Arial", sans-serif;
+  width: 40px;
+  outline: none;
+  height: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  color: black;
+  background-color: inherit;
+  border: none;
+}
+
+.price__control--max {
+  margin-left: 35px;
 }
 
 .filters__form ul {
@@ -747,68 +887,104 @@ img {
 
 .filter-colors__item label {
   position: relative;
-  display: block;
   cursor: pointer;
   user-select: none;
 }
 
-.filter-colors__item input + label::before {
-  content: "";
+.filtres-colors__checkbox + .filtres-colors__tick {
   position: absolute;
+  top: 0px;
   left: -40px;
   transform: translateY(-25%);
-  top: 0;
-  width: 25px;
-  height: 25px;
+  height: 23px;
+  width: 23px;
+  border: 2px solid var(--basic-black);
   border-radius: 2px;
-  border: 2px solid #000000;
+  background-color: inherit;
 }
 
-.filter-colors__item input:checked + label::before {
+.filtres-colors__checkbox:checked + .filtres-colors__tick::before {
   content: "";
   position: absolute;
-  top: 4px;
-  left: -38px;
-  width: 22px;
-  height: 22px;
-  background-image: url("../img/sprite.svg#check"); /*TODO Почему тут не подключается картинка???(img/ - такой путь тоже не работает*/
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  top: 9px;
+  left: 4px;
+  height: 2px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: #000;
+}
+
+.filtres-colors__checkbox:checked + .filtres-colors__tick::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  height: 2px;
+  width: 10px;
+  transform: rotate(-45deg);
+  background-color: var(--basic-black);
+}
+
+.filtres-colors__checkbox + .filtres-colors__tick:hover,
+.filtres-colors__checkbox + .filtres-colors__tick:hover {
+  opacity: 0.6;
+}
+
+.filtres-colors__checkbox + .filtres-colors__tick:active,
+.filtres-colors__checkbox + .filtres-colors__tick:checked:active {
+  opacity: 1;
 }
 
 .filter-bluetooth__item label {
   position: relative;
-  display: block;
   cursor: pointer;
   user-select: none;
 }
 
-.filter-bluetooth__item input + label::before {
+.filter-bluetooth__radio + label::before {
   content: "";
   position: absolute;
   left: -40px;
   top: -1px;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #000000;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--basic-black);
   border-radius: 50%;
 }
 
-.filter-bluetooth__item input:checked + label::after {
+.filter-bluetooth__radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -34px;
+  top: 7px;
+  left: -32px;
   width: 8px;
   height: 8px;
-  background-color: #000000;
+  background-color: var(--basic-black);
   border-radius: 50%;
+}
+
+.filter-bluetooth__radio:hover + label:hover {
+  opacity: 0.6;
+}
+
+.filter-bluetooth__radio:active + label:active {
+  opacity: 1;
+}
+
+.filter-bluetooth__radio:checked:active + label:active {
+  opacity: 1;
+}
+
+.filter-bluetooth__radio:checked:hover + label:hover {
+  opacity: 1;
 }
 
 .filters__button span {
   position: relative;
+  outline: none;
+  display: block;
   padding: 10px 35px;
-} /*TODO не понимаю как тут с паддингами быть. чему-то эти игнорируются*/
+}
 
 .filters__button {
   color: inherit;
@@ -822,6 +998,7 @@ img {
   border: none;
   background: inherit;
   padding: 0;
+  outline: none;
 }
 
 .filters__button::before {
@@ -855,12 +1032,10 @@ img {
   justify-content: space-between;
   width: 100%;
   padding: 25px 0 25px 70px;
-  box-sizing: border-box;
 }
 
 .catalog .container {
   padding-left: 60px;
-  box-sizing: border-box;
 }
 
 .catalog-options__title {
@@ -970,6 +1145,7 @@ img {
   align-items: center;
   position: absolute;
   top: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
 }
@@ -1027,10 +1203,9 @@ img {
   flex-grow: 1;
 }
 
-.pagination__item:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
-  margin-right: 25px; /*TODO как упростить? кажется слишком сложный сделал*/
+.pagination__item:nth-child(3) {
+  margin: 0 25px;
 }
-
 
 .pagination__item a {
   font-family: "Gilroy", "Arial", sans-serif;

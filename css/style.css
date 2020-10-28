@@ -131,7 +131,7 @@ img {
 .header__row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 36px;
 }
 
 .header__search {
@@ -144,11 +144,13 @@ img {
 .header__search svg {
   position: absolute;
   left: 0;
+  top: 2px;
 }
 
 .search__input {
   border: none;
   padding-left: 38px;
+  padding-bottom: 14px;
   width: 356px;
   outline: none;
   border-bottom: 2px solid transparent;
@@ -161,7 +163,7 @@ img {
 
 .search__input:focus ~ .search__button {
   pointer-events: auto;
-  opacity: 1;
+  display: block;
 }
 
 .search__input::placeholder {
@@ -175,21 +177,21 @@ img {
 
 .search__button {
   outline: none;
-  padding: 0;
   margin: 0;
   border: 2px solid var(--basic-black);
   padding: 15px;
   text-transform: uppercase;
   background: inherit;
-  opacity: 0;
+  display: none;
   pointer-events: none;
   position: absolute;
-  top: -30px;
+  top: -17px;
   right: -84px;
 }
 
 .search__button:hover {
   background: var(--basic-black);
+  display: block;
   color: var(--basic-white);
 }
 
@@ -199,14 +201,22 @@ img {
 /*TODO при клике на кнопку сразу сбрасывается фокус. 
 и сам клик не видно. как быть???*/
 
+.header-navigation {
+  padding-bottom: 50px;
+}
+
 .header-navigation__submenu {
   position: absolute;
   top: 20px;
   left: -60px;
   display: flex;
   width: 1100px;
-  opacity: 0;
+  display: none;
   background-color: var(--additional-light-yellow);
+}
+
+.submenu:hover {
+  display: flex;
 }
 
 .header-navigation__submenu ul {
@@ -230,6 +240,10 @@ img {
 
 .header-navigation__submenu a:active {
   opacity: 0.3;
+}
+
+.header__row--mainpage {
+  padding-bottom: 36px;
 }
 
 .header-row__panel,
@@ -274,7 +288,7 @@ img {
 }
 
 .navigation-contact:hover ~ .submenu {
-  opacity: 1;
+  display: flex;
 }
 
 .header-row__panel a:active,
@@ -290,6 +304,7 @@ img {
 
 .user-panel__item--active {
   display: flex;
+  padding-bottom: 14px;
 }
 
 .user-panel__item--active .user-panel__link:last-child {
@@ -298,7 +313,8 @@ img {
 }
 
 .user-panel__item--login {
-  min-width: 430px;
+  min-width: 404px;
+  padding-left: 30px;
 }
 
 .header-navigation__list a {
@@ -336,29 +352,45 @@ img {
   font-size: 179px;
   line-height: 219px;
   color: var(--basic-white);
-  background: var(--additional-light-yellow);
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 60px;
+  background: transparent;
+  position: absolute;
+  right: 48px;
+  top: -18px;
 }
 
 .slider__wrapper {
   padding: 0 60px;
   display: flex;
+  background: linear-gradient(
+    to bottom,
+    var(--additional-light-yellow) 26%,
+    var(--basic-white) 26%,
+    var(--basic-white) 70%
+  );
+}
+
+.slider__item {
+  position: relative;
 }
 
 .slider__panel {
-  margin-left: 120px;
+  margin-left: 127px;
+  width: 471px;
 }
 
 .slider__controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 47px;
 }
 
 .section-base {
   margin-bottom: 109px;
+}
+
+.slider__pic {
+  width: calc(100% - 471px);
 }
 
 .slider__logo {
@@ -366,11 +398,18 @@ img {
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
+  padding-top: 92px;
+  margin: 0 0 26px 0;
+}
+
+.slider__text {
+  margin: 0 0 50px 0;
 }
 
 .slider__more span {
   position: relative;
-  padding: 10px 35px;
+  padding: 10px 45px;
+  display: block;
 }
 
 .slider__more {
@@ -379,7 +418,7 @@ img {
   font-size: 18px;
   line-height: 22px;
   color: inherit;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.1px;
   text-transform: uppercase;
   position: relative;
 }
@@ -410,8 +449,8 @@ img {
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
-  padding-right: 60px;
   text-align: left;
+  padding-top: 12px;
 }
 
 .slider-table__row td {
@@ -420,17 +459,23 @@ img {
   font-size: 36px;
   line-height: 42px;
   letter-spacing: 0.1em;
-  padding-right: 60px;
   text-align: left;
+}
+
+.slider-table__row th:not(:last-child),
+.slider-table__row td:not(:last-child) {
+  padding-right: 57px;
 }
 
 .slider__nav {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.slider-nav__item {
-  margin-right: 20px;
+.slider-nav__item:not(:last-child) {
+  margin-right: 17px;
 }
 
 .slider-nav__item a {
@@ -1714,14 +1759,37 @@ fieldset.filters__bluetooth {
   opacity: 0.3;
 }
 
-.modal-map {
-  display: flex;
-  justify-content: center;
+.modal__map {
+  position: fixed;
+  display: none;
+  width: 960px;
+  height: 560px;
+  left: 50%;
+  top: 50%;
+  margin-left: -480px;
+  margin-top: -280px;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
 
-.modal-map__wrapper,
-.modal-contact__wraper {
-  position: relative;
+.modal__map--show {
+  display: block;
+}
+
+.modal__contact {
+  position: fixed;
+  display: none;
+  width: 958px;
+  padding: 90px 100px;
+  left: 50%;
+  top: 50%;
+  margin-left: -480px;
+  margin-top: -275px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+}
+
+.modal__contact--show {
+  display: block;
 }
 
 .modal-map__cross,

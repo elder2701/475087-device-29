@@ -54,7 +54,7 @@
           </li>
         </ul>
       </div>
-      <nav class="header__row header-navigation">
+      <nav class="header__row header-navigation header__row--mainpage">
         <div class="header-navigation__menu">
           <a class="header-navigation__link navigation-contact" href="catalog.html">
             Каталог товаров
@@ -116,10 +116,10 @@
             <div class="slider__number">01</div>
             <div class="slider__wrapper">
               <div class="slider__pic">
-                <img src="img/slider-1.jpg" width="384" height="486" alt="Самая длинная селфи-палка" />
+                <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка" />
               </div>
               <div class="slider__panel">
-                <p class="slider__logo">Делай Селфи, как Бен Стиллер</p>
+                <p class="slider__logo">Делай селфи,<br>как Бен Стиллер!</p>
                 <p class="slider__text">
                   Самая длинная палка для селфи доступна в нашем магазине.
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5
@@ -131,12 +131,12 @@
                     <span>Подробнее</span>
                   </a>
                   <ul class="slider__nav slider-nav">
-                    <li class="slider-nav__item">
+                    <li class="slider-nav__item slider-nav__item--active">
                       <a href="#">
                         <div></div>
                       </a>
                     </li>
-                    <li class="slider-nav__item slider-nav__item--active">
+                    <li class="slider-nav__item">
                       <a href="#">
                         <div></div>
                       </a>
@@ -163,17 +163,17 @@
               </div>
             </div>
           </div>
-          <!--  <div class="slider__item">
+          <div class="slider__item visually-hidden">
             <h2 class="slider__title visually-hidden">Горячие предложения</h2>
             <div class="slider__number">
               02
             </div>
             <div class="slider__wrapper">
               <div class="slider__pic">
-                <img src="img/slider-2.jpg" width="345" height="485" alt="Мотивирующий фитнес-браслет">
+                <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
               </div>
               <div class="slider__panel">
-                <p class="slider__logo">Худеем правильно!</p>
+                <p class="slider__logo">Худеем<br>правильно!</p>
                 <p class="slider__text">
                   Мотивирующие фитнес-браслеты помогут найти в себе силы
                   не пропускать занятия и соблюдать диету.
@@ -198,23 +198,23 @@
                 </div>
                 <table class="slider__table slider-table">
                   <tr class="slider-table__row">
-                    <th>Без подзарядки</th>
+                    <td>48 часов</td>
                   </tr>
                   <tr class="slider-table__row">
-                    <td>48 часов</td>
+                    <th>Без подзарядки</th>
                   </tr>
                 </table>
               </div>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item visually-hidden">
             <h2 class="slider__title visually-hidden">Горячие предложения</h2>
             <div class="slider__number">
               03
             </div>
             <div class="slider__wrapper">
               <div class="slider__pic">
-                <img src="img/slider-3.jpg" width="526" height="334" alt="Высокотехнологичный квадрокоптер">
+                <img src="img/slider-3.png" width="526" height="334" alt="Высокотехнологичный квадрокоптер">
               </div>
               <div class="slider__panel">
                 <p class="slider__logo">Порхает как бабочка, жалит как пчела!</p>
@@ -240,17 +240,17 @@
                 </div>
                 <table class="slider__table slider-table">
                   <tr class="slider-table__row">
-                    <th>Дальность полета</th>
-                    <th>Радиус поражения</th>
-                  </tr>
-                  <tr class="slider-table__row">
                     <td>800 м</td>
                     <td>50 м</td>
+                  </tr>
+                  <tr class="slider-table__row">
+                    <th>Дальность полета</th>
+                    <th>Радиус поражения</th>
                   </tr>
                 </table>
               </div>
             </div>
-          </div>-->
+          </div>
         </div>
         <ul class="main__popular main-popular">
           <li class="main-popular__item popular-item">
@@ -325,7 +325,7 @@
             </a>
           </li>
         </ul>
-        <div class="services__item services-item">
+        <div class="services__item services-item visually-hidden">
           <div class="services-item__info">
             <span class="services-item__title">Доставка</span>
             <p class="services-item__text">
@@ -338,12 +338,12 @@
             <img src="img/delivery.png" width="136" height="164" alt="Доставка" />
           </div>
         </div>
-        <!--   <div class="services__item services-item">
+        <div class="services__item services-item">
             <div class="services-item__info">
               <span class="services-item__title">Гарантия</span>
               <p class="services-item__text">
-                Если из-за возгорания купленного у нас товара у вас сгорит дом —
-                не переживайте, мы выдадим вам новый.
+                Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
+                не переживайте, мы выдадим вам новый.<br>
                 Товар, не дом, конечно же.
               </p>
             </div>
@@ -351,26 +351,22 @@
               <img src="img/warranty.png" width="171" height="195" alt="Гарантия">
             </div>
           </div>
-          <div class="services__item services-item">
+          <div class="services__item services-item visually-hidden">
             <div class="services-item__info">
               <span class="services-item__title">Кредит</span>
               <p class="services-item__text">
                 Залезть в долговую яму стало проще! Кредитные консультанты
                 подберут для вас наиболее выгодные
-                условия кредита. Выгодные для нашего банка, разумеется.
+                условия&nbsp;кредита.&nbsp;Выгодные для нашего банка, разумеется.
               </p>
             </div>
             <div class="services-item__logo">
               <img class="services-item__logo" src="img/credit.png" width="156" height="188" alt="Кредит">
             </div>
-          </div>-->
+          </div>
       </div>
     </section>
     <section class="main__section partners">
-      <!--TODO Из за центровки, и то что этот блок не получилось вынести в grid
-        ,тут совсем не понятно как расстояние между блоками распределить, видимо подгонять придется, 
-        пришлось этот блок вынести в отдельную секцию
-      -->
       <!--Этот заголовк не входит в макет. нужно скрыть-->
       <h2 class="partners__title visually-hidden">Партнеры</h2>
       <div class="container">
@@ -526,8 +522,7 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-contact visually-hidden">
-    <div class="modal-contact__wraper">
+  <section class="modal modal__contact">
       <form class="modal-contact__form contact-form">
         <div class="contact-form__row">
           <div class="contact-form__name">
@@ -550,14 +545,13 @@
         </div>
       </form>
       <button type="button" class="modal-contact__cross"></button>
-    </div>
   </section>
-  <section class="modal modal-map visually-hidden">
-    <div class="modal-map__wrapper">
-      <img class="modal-map__pic" src="img/map-big.png" width="994" height="593" alt="Наше местоположение" />
-      <button type="button" class="modal-map__cross"></button>
-    </div>
+  <section class="modal modal__map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2249.129940824428!2d37.5292854!3d55.6867286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1487536181102" width="960" height="560" style="border:0" allowfullscreen></iframe>
+    <button type="button" class="modal-map__cross"></button>
   </section>
+  <script src="/js/modal.js"></script>
+  <script src="/js/slider.js"></script>
 </body>
 
 </html>

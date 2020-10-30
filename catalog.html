@@ -27,7 +27,7 @@
           <input class="search__input" type="text" placeholder="Поиск по сайту" />
           <button type="submit" class="search__button">Найти</button>
         </form>
-        <ul class="header-row__panel user-panel">
+        <ul class="header__panel user-panel">
           <li class="user-panel__item user-panel__item--active">
             <a class="user-panel__link" href="profile.html">
               <svg width="13" height="14">
@@ -176,40 +176,40 @@
                 <li class="filter-colors__item">
                   <label for="black-color" class="filter-colors__control">
                     <input type="checkbox" id="black-color" name="color" value="black"
-                      class="visually-hidden filtres-colors__checkbox" checked />
-                    <span class="filtres-colors__tick"></span>
+                      class="visually-hidden filters-colors__checkbox" checked />
+                    <span class="filters-colors__tick"></span>
                     Черный
                   </label>
                 </li>
                 <li class="filter-colors__item">
                   <label for="white-color" class="filter-colors__control">
                     <input type="checkbox" id="white-color" name="color" value="white"
-                      class="visually-hidden filtres-colors__checkbox" />
-                    <span class="filtres-colors__tick"></span>
+                      class="visually-hidden filters-colors__checkbox" />
+                    <span class="filters-colors__tick"></span>
                     Белый
                   </label>
                 </li>
                 <li class="filter-colors__item">
                   <label for="blue-color" class="filter-colors__control">
                     <input type="checkbox" id="blue-color" name="color" value="blue"
-                      class="visually-hidden filtres-colors__checkbox" checked />
-                    <span class="filtres-colors__tick"></span>
+                      class="visually-hidden filters-colors__checkbox" checked />
+                    <span class="filters-colors__tick"></span>
                     Синий
                   </label>
                 </li>
                 <li class="filter-colors__item">
                   <label for="red-color" class="filter-colors__control">
                     <input type="checkbox" id="red-color" name="color" value="red"
-                      class="visually-hidden filtres-colors__checkbox" checked />
-                    <span class="filtres-colors__tick"></span>
+                      class="visually-hidden filters-colors__checkbox" checked />
+                    <span class="filters-colors__tick"></span>
                     Красный
                   </label>
                 </li>
                 <li class="filter-colors__item">
                   <label for="pink-color" class="filter-colors__control">
                     <input type="checkbox" id="pink-color" name="color" value="pink"
-                      class="visually-hidden filtres-colors__checkbox" />
-                    <span class="filtres-colors__tick"></span>
+                      class="visually-hidden filters-colors__checkbox" />
+                    <span class="filters-colors__tick"></span>
                     Розовый
                   </label>
                 </li>
@@ -231,7 +231,7 @@
               </ul>
             </fieldset>
             <button type="submit" class="filters__button">
-              <span>Показать</span>
+              Показать
             </button>
           </form>
         </div>
@@ -240,10 +240,10 @@
             <ul class="catalog__list">
               <li class="catalog__item catalog-item">
                 <div class="catalog-item__stuff">
-                  <img src="img/catalogue-1.jpg" width="360" height="380" alt="Любительская селфи-палка" />
+                  <img src="img/catalog-1.jpg" width="360" height="380" alt="Любительская селфи-палка" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
-                      <span>В корзину</span>
+                      В корзину
                     </a>
                     <a href="#" class="item-menu__compare">Добавить к сравнению</a>
                   </div>
@@ -262,10 +262,10 @@
               </li>
               <li class="catalog__item catalog-item">
                 <div class="catalog-item__stuff">
-                  <img src="img/catalogue-2.jpg" width="360" height="380" alt="Профессиональнаяселфи-палка" />
+                  <img src="img/catalog-2.jpg" width="360" height="380" alt="Профессиональнаяселфи-палка" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
-                      <span>В корзину</span>
+                      В корзину
                     </a>
                     <a href="#" class="item-menu__compare">Добавить к сравнению</a>
                   </div>
@@ -287,10 +287,10 @@
               </li>
               <li class="catalog__item catalog-item">
                 <div class="catalog-item__stuff">
-                  <img src="img/catalogue-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" />
+                  <img src="img/catalog-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
-                      <span>В корзину</span>
+                      В корзину
                     </a>
                     <a href="#" class="item-menu__compare">Добавить к сравнению</a>
                   </div>
@@ -313,10 +313,10 @@
               </li>
               <li class="catalog__item catalog-item">
                 <div class="catalog-item__stuff">
-                  <img src="img/catalogue-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»" />
+                  <img src="img/catalog-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
-                      <span>В корзину</span>
+                      В корзину
                     </a>
                     <a href="#" class="item-menu__compare">Добавить к сравнению</a>
                   </div>
@@ -335,10 +335,8 @@
               </li>
             </ul>
             <div class="catalog__pagination pagination">
+              <a class="pagination__button">Нaзад</a>
               <ul class="pagination__list">
-                <li class="pagination__item">
-                  <a>Нaзад</a>
-                </li>
                 <li class="pagination__item pagination__item--current">
                   <a>1</a>
                 </li>
@@ -348,10 +346,9 @@
                 <li class="pagination__item">
                   <a href="#">3</a>
                 </li>
-                <li class="pagination__item pagination__item--next">
-                  <a href="#">Вперед</a>
-                </li>
               </ul>
+              <a href="#" class="pagination__button pagination__button--next">Вперед</a>
+              <!--pagination__button--next - этот класс означает, что у нас есть возможность переключить пагинацию в этом направлении-->
             </div>
           </div>
         </div>
@@ -362,13 +359,11 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__row">
-        <div class="footer__logo">
-          <a href="index.html">
-            <svg width="163" height="35" fill="#f0c52e">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-        </div>
+        <a href="index.html" class="footer__logo">
+          <svg width="163" height="35" fill="#f0c52e">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
         <ul class="footer__panel footer-panel">
           <li class="footer-panel__item">
             <a href="#">
@@ -422,7 +417,6 @@
         </span>
       </div>
       <div class="footer__row">
-        <div class="footer__line"></div>
         <ul class="footer__socials footer-socials">
           <li class="footer-socials__item">
             <a href="#">

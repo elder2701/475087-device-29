@@ -27,7 +27,7 @@
           <input class="search__input" type="text" placeholder="Поиск по сайту" />
           <button type="submit" class="search__button">Найти</button>
         </form>
-        <ul class="header-row__panel user-panel">
+        <ul class="header__panel user-panel">
           <li class="user-panel__item user-panel__item--login">
             <a href="#">
               <svg width="13" height="14">
@@ -110,13 +110,27 @@
     <section class="main__section section-base">
       <div class="container">
         <div class="main__slider slider">
-          <div class="slider__item">
+          <ul class="slider__nav slider-nav">
+            <li class="slider-nav__item slider-nav__item--active">
+              <a href="#">
+              </a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#">
+              </a>
+            </li>
+            <li class="slider-nav__item">
+              <a href="#">
+              </a>
+            </li>
+          </ul>
+          <div class="slider__item slider__item--active">
             <h2 class="slider__title visually-hidden">Горячие предложения</h2>
             <!--Этот заголовок не входит в макет. Нужно будет скрыть-->
             <div class="slider__number">01</div>
             <div class="slider__wrapper">
-              <div class="slider__pic">
-                <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка" />
+              <div class="slider__pic slider__pic--stick">
+                <img src="img/selfie-stick.png" width="384" height="486" alt="Самая длинная селфи-палка" />
               </div>
               <div class="slider__panel">
                 <p class="slider__logo">Делай селфи,<br>как Бен Стиллер!</p>
@@ -128,25 +142,8 @@
 
                 <div class="slider__controls">
                   <a href="#" class="slider__more">
-                    <span>Подробнее</span>
+                    Подробнее
                   </a>
-                  <ul class="slider__nav slider-nav">
-                    <li class="slider-nav__item slider-nav__item--active">
-                      <a href="#">
-                        <div></div>
-                      </a>
-                    </li>
-                    <li class="slider-nav__item">
-                      <a href="#">
-                        <div></div>
-                      </a>
-                    </li>
-                    <li class="slider-nav__item">
-                      <a href="#">
-                        <div></div>
-                      </a>
-                    </li>
-                  </ul>
                 </div>
                 <table class="slider__table slider-table">
                   <tr class="slider-table__row">
@@ -163,20 +160,20 @@
               </div>
             </div>
           </div>
-          <div class="slider__item visually-hidden">
+          <div class="slider__item">
             <h2 class="slider__title visually-hidden">Горячие предложения</h2>
             <div class="slider__number">
               02
             </div>
             <div class="slider__wrapper">
               <div class="slider__pic">
-                <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
+                <img src="img/band.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
               </div>
               <div class="slider__panel">
                 <p class="slider__logo">Худеем<br>правильно!</p>
                 <p class="slider__text">
                   Мотивирующие фитнес-браслеты помогут найти в себе силы
-                  не пропускать занятия и соблюдать диету.
+                  не&nbsp;пропускать занятия и соблюдать диету.
                 </p>
                 <div class="slider__controls">
                   <a href="#" class="slider__more">
@@ -184,17 +181,6 @@
                       Подробнее
                     </span>
                   </a>
-                  <ul class="slider__nav slider-nav">
-                    <li class="slider-nav__item">
-                      <a href="#"></a>
-                    </li>
-                    <li class="slider-nav__item">
-                      <a href="#"></a>
-                    </li>
-                    <li class="slider-nav__item">
-                      <a href="#"></a>
-                    </li>
-                  </ul>
                 </div>
                 <table class="slider__table slider-table">
                   <tr class="slider-table__row">
@@ -207,36 +193,25 @@
               </div>
             </div>
           </div>
-          <div class="slider__item visually-hidden">
+          <div class="slider__item">
             <h2 class="slider__title visually-hidden">Горячие предложения</h2>
             <div class="slider__number">
               03
             </div>
             <div class="slider__wrapper">
               <div class="slider__pic">
-                <img src="img/slider-3.png" width="526" height="334" alt="Высокотехнологичный квадрокоптер">
+                <img src="img/quadcopter.png" width="526" height="334" alt="Высокотехнологичный квадрокоптер">
               </div>
               <div class="slider__panel">
-                <p class="slider__logo">Порхает как бабочка, жалит как пчела!</p>
+                <p class="slider__logo">Порхает&nbsp;как&nbsp;бабочка, жалит как пчела!</p>
                 <p class="slider__text">
                   Этот обычный, на первый взгляд, квадрокоптер оснащен
-                  мощным лазером, замаскированным под стандартную камеру.
+                  мощным&nbsp;лазером, замаскированным под стандартную камеру.
                 </p>
                 <div class="slider__controls">
                   <a href="#" class="slider__more">
                     <span>Подробнее</span>
                   </a>
-                  <ul class="slider__nav slider-nav">
-                    <li class="slider-nav__item">
-                      <a href="#"></a>
-                    </li>
-                    <li class="slider-nav__item">
-                      <a href="#"></a>
-                    </li>
-                    <li class="slider-nav__item">
-                      <a href="#"></a>
-                    </li>
-                  </ul>
                 </div>
                 <table class="slider__table slider-table">
                   <tr class="slider-table__row">
@@ -266,7 +241,7 @@
               <div class="popular-item__pic">
                 <img src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи" />
               </div>
-              <h3 class="popular-item__title">Моноподы для селфи</h3>
+              <h3 class="popular-item__title">Моноподы для&nbsp;селфи</h3>
             </a>
           </li>
           <li class="main-popular__item popular-item">
@@ -311,17 +286,17 @@
         <ul class="services__menu services-menu">
           <li class="services-menu__item services-menu__item--active">
             <a href="#">
-              <span>Доставка</span>
+              Доставка
             </a>
           </li>
           <li class="services-menu__item">
             <a href="#">
-              <span>Гарантия</span>
+              Гарантия
             </a>
           </li>
           <li class="services-menu__item">
             <a href="#">
-              <span>Кредит</span>
+              Кредит
             </a>
           </li>
         </ul>
@@ -339,31 +314,31 @@
           </div>
         </div>
         <div class="services__item services-item">
-            <div class="services-item__info">
-              <span class="services-item__title">Гарантия</span>
-              <p class="services-item__text">
-                Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
-                не переживайте, мы выдадим вам новый.<br>
-                Товар, не дом, конечно же.
-              </p>
-            </div>
-            <div class="services-item__logo">
-              <img src="img/warranty.png" width="171" height="195" alt="Гарантия">
-            </div>
+          <div class="services-item__info">
+            <span class="services-item__title">Гарантия</span>
+            <p class="services-item__text">
+              Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
+              не переживайте, мы выдадим вам новый.<br>
+              Товар, не дом, конечно же.
+            </p>
           </div>
-          <div class="services__item services-item visually-hidden">
-            <div class="services-item__info">
-              <span class="services-item__title">Кредит</span>
-              <p class="services-item__text">
-                Залезть в долговую яму стало проще! Кредитные консультанты
-                подберут для вас наиболее выгодные
-                условия&nbsp;кредита.&nbsp;Выгодные для нашего банка, разумеется.
-              </p>
-            </div>
-            <div class="services-item__logo">
-              <img class="services-item__logo" src="img/credit.png" width="156" height="188" alt="Кредит">
-            </div>
+          <div class="services-item__logo">
+            <img src="img/warranty.png" width="171" height="195" alt="Гарантия">
           </div>
+        </div>
+        <div class="services__item services-item visually-hidden">
+          <div class="services-item__info">
+            <span class="services-item__title">Кредит</span>
+            <p class="services-item__text">
+              Залезть в долговую яму стало проще! Кредитные консультанты
+              подберут для вас наиболее выгодные
+              условия&nbsp;кредита.&nbsp;Выгодные для нашего банка, разумеется.
+            </p>
+          </div>
+          <div class="services-item__logo">
+            <img class="services-item__logo" src="img/credit.png" width="156" height="188" alt="Кредит">
+          </div>
+        </div>
       </div>
     </section>
     <section class="main__section partners">
@@ -373,22 +348,22 @@
         <ul class="main__partners partners">
           <li class="partners__item">
             <a class="partners__logo" href="#">
-              <img src="img/partner-1.jpg" width="260" height="100" alt="Партнер DJI" />
+              <img src="img/partner-dji.jpg" width="260" height="100" alt="Партнер DJI" />
             </a>
           </li>
           <li class="partners__item">
             <a class="partners__logo" href="#">
-              <img src="img/partner-2.jpg" width="260" height="100" alt="Партнер SP Adgets" />
+              <img src="img/partner-sp-gadgets.jpg" width="260" height="100" alt="Партнер SP Adgets" />
             </a>
           </li>
           <li class="partners__item">
             <a class="partners__logo" href="#">
-              <img src="img/partner-3.jpg" width="260" height="100" alt="Партнер GoPro" />
+              <img src="img/partner-gopro.jpg" width="260" height="100" alt="Партнер GoPro" />
             </a>
           </li>
           <li class="partners__item">
             <a class="partners__logo" href="#">
-              <img src="img/partner-4.jpg" width="260" height="100" alt="Партнер Vive" />
+              <img src="img/partner-vive.jpg" width="260" height="100" alt="Партнер Vive" />
             </a>
           </li>
         </ul>
@@ -414,7 +389,7 @@
             <li class="info-about__item">ЖелДорЭкспедиция</li>
           </ul>
           <a href="#" class="info-about__more">
-            <span>Подробнее о нас</span>
+            Подробнее о нас
           </a>
         </div>
         <div class="info__contact info-contact">
@@ -424,11 +399,11 @@
             сможете проверить работоспособность покупки. Всякое бывает
           </p>
           <!--Карта-->
-          <div class="info-contact__map">
+          <a class="info-contact__map" href="https://goo.gl/maps/mbaN6b4YRnLfNGzK7">
             <img src="img/map.jpg" width="560" height="222" alt="Мы на карте" />
-          </div>
+          </a>
           <a href="#" class="info-contact__letter">
-            <span>Напишите нам</span>
+            Напишите нам
           </a>
         </div>
       </div>
@@ -438,13 +413,11 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__row">
-        <div class="footer__logo">
-          <a href="#">
-            <svg width="163" height="35" fill="#f0c52e">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-        </div>
+        <a href="#" class="footer__logo">
+          <svg width="163" height="35" fill="#f0c52e">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
         <ul class="footer__panel footer-panel">
           <li class="footer-panel__item">
             <a href="#">
@@ -492,7 +465,6 @@
         <a class="footer__tel" href="tel:+74954959595">+7 (495) 495-95-95 </a>
       </div>
       <div class="footer__row">
-        <div class="footer__line"></div>
         <ul class="footer__socials footer-socials">
           <li class="footer-socials__item">
             <a href="#">
@@ -523,35 +495,34 @@
     </div>
   </footer>
   <section class="modal modal__contact">
-      <form class="modal-contact__form contact-form">
-        <div class="contact-form__row">
-          <div class="contact-form__name">
-            <label for="contact-name">Ваше имя</label>
-            <input id="contact-name" type="text" name="contact-firstname" placeholder="Имя Фамилия" />
-          </div>
-          <div class="contact-form__email">
-            <label for="contact-email">Ваш e-mail</label>
-            <input id="contact-email" type="email" name="contact-email" placeholder="email@example.com" />
-          </div>
+    <form class="modal-contact__form contact-form">
+      <div class="contact-form__row">
+        <div class="contact-form__name">
+          <label for="contact-name">Ваше имя</label>
+          <input id="contact-name" required type="text" name="contact-firstname" placeholder="Имя Фамилия" />
         </div>
-        <div class="contact-form__inform">
-          <label for="contact-inform">Текст письма</label>
-          <textarea id="contact-inform" placeholder="В свободной форме" rows="7"></textarea>
+        <div class="contact-form__email">
+          <label for="contact-email">Ваш e-mail</label>
+          <input id="contact-email" required type="email" name="contact-email" placeholder="email@example.com" />
         </div>
-        <div class="form-contact__footer">
-          <button type="submit" class="contact-form__button">
-            <span>Отправить</span>
-          </button>
-        </div>
-      </form>
-      <button type="button" class="modal-contact__cross"></button>
+      </div>
+      <div class="contact-form__inform">
+        <label for="contact-inform">Текст письма</label>
+        <textarea id="contact-inform" required placeholder="В свободной форме" rows="7"></textarea>
+      </div>
+      <button type="submit" class="contact-form__button">
+        Отправить
+      </button>
+    </form>
+    <button type="button" class="modal-contact__cross"></button>
   </section>
   <section class="modal modal__map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2249.129940824428!2d37.5292854!3d55.6867286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1487536181102" width="960" height="560" style="border:0" allowfullscreen></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2249.129940824428!2d37.5292854!3d55.6867286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1487536181102"
+      width="960" height="560" style="border:0" allowfullscreen></iframe>
     <button type="button" class="modal-map__cross"></button>
   </section>
-  <script src="/js/modal.js"></script>
-  <script src="/js/slider.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

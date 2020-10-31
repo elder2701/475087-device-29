@@ -346,7 +346,7 @@ img {
 /*slider*/
 
 .main__slider {
-  margin-bottom: 109px;
+  margin-bottom: 113px;
   position: relative;
 }
 
@@ -411,7 +411,7 @@ img {
 }
 
 .section-base {
-  margin-bottom: 109px;
+  margin-bottom: 153px;
 }
 
 .slider__pic {
@@ -581,33 +581,82 @@ img {
 
 .services__wrapper {
   display: flex;
-  padding-bottom: 130px;
+  padding-bottom: 123px;
 }
 
 .services__item {
+  display: none;
+}
+
+.services__item--active {
   display: flex;
+}
+
+
+
+.services-item__info {
+  position: relative;
+  padding-top: 3px;
+}
+
+.services-item__info--delivery::before
+ {
+  content: "";
+  width: 136px;
+  height: 164px;
+  position: absolute;
+  display: block;
+  background: url(/img/delivery.png) no-repeat;
+  background-size: 136px 164px;
+  right: -51px;
+  transform: translateX(100%);
+}
+
+.services-item__info--warranty::before {
+  content: "";
+  width: 171px;
+  height: 195px;
+  position: absolute;
+  display: block;
+  background: url(/img/warranty.png) no-repeat;
+  background-size: 171px 195px;
+  right: -51px;
+  transform: translateX(100%);
+}
+
+.services-item__info--credit::before {
+  content: "";
+  width: 156px;
+  height: 188px;
+  position: absolute;
+  display: block;
+  background: url(/img/credit.png) no-repeat;
+  background-size: 156px 188px;
+  right: -51px;
+  transform: translateX(100%);
 }
 
 .services__menu {
   list-style: none;
   margin: 0;
-  padding: 15px 115px 0 0;
+  padding: 12px 115px 0 0;
   position: relative;
+  margin-right: 8px;
 }
 
 .services__menu::after {
   display: block;
   content: "";
   position: absolute;
-  height: 300px;
-  width: 5px;
-  transform: translateY(-100%);
-  right: 110px;
+  height: 322px;
+  width: 7px;
+  transform: translate(0,-82%);
+  right: 108px;
   background: var(--basic-black);
 }
 
 .services-menu__item {
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   width: 277px;
 }
 
@@ -678,11 +727,20 @@ img {
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 41px;
 }
 
 .services-item__text {
-  line-height: 28px;
+  line-height: 30px;
   letter-spacing: 0.1em;
+  margin: 0;
+  display: block;
+  width: 535px;
+}
+
+.services-item__info--warranty .services-item__text {
+  width: 571px;
 }
 
 .partners {
@@ -709,13 +767,14 @@ img {
 
 /*information*/
 .info {
-  margin-bottom: 80px;
+  margin-bottom: 76px;
 }
 
 .info__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 130px;
+  column-gap: 40px;
+  padding-top: 53px
 }
 
 .info-about,
@@ -728,7 +787,7 @@ img {
   position: absolute;
   display: block;
   content: "";
-  top: 0;
+  top: -57px;
   width: 80px;
   height: 7px;
   background: var(--basic-black);
@@ -741,18 +800,23 @@ img {
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
+  margin: 0 0 41px 0;
 }
 
 .info-about__text,
 .info-contact__text {
   line-height: 28px;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
+}
+
+.info-about__text--last {
+  margin-bottom: 60px;
 }
 
 .info-about__list {
   list-style: none;
   padding: 0;
-  margin-bottom: 50px;
+  margin: 0 0 69px 0;
 }
 
 .info-about__item::before {
@@ -764,7 +828,8 @@ img {
   height: 8px;
   border-radius: 6px;
   border: 2px var(--basic-light-grey) solid;
-  transform: translateY(50%);
+  transform: translateY(100%);
+  top: 3px;
 }
 
 .info-about__item {
@@ -773,15 +838,15 @@ img {
   font-size: 16px;
   line-height: 28px;
   position: relative;
-  padding-left: 40px;
+  padding-left: 32px;
 }
 
 .info-about__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 14px;
 }
 
 .info-contact__map {
-  margin-bottom: 50px;
+  margin-bottom: 75px;
   display: block;
   text-decoration: none;
   line-height: 0;
@@ -797,10 +862,10 @@ img {
   text-transform: uppercase;
   color: inherit;
   position: relative;
-  padding: 10px 35px;
+  padding: 10px;
   display: flex;
   justify-content: center;
-  max-width: 290px;
+  width: 260px;
   background: linear-gradient(
     to bottom,
     var(--basic-white) 16px,
@@ -1542,6 +1607,10 @@ fieldset.filters__bluetooth {
   margin: 0;
 }
 
+.footer-panel__item:first-child {
+  min-width: 84px;
+}
+
 .footer-panel__item:nth-last-child(2) {
   margin-right: 41px;
   margin-left: 38px;
@@ -1708,7 +1777,7 @@ fieldset.filters__bluetooth {
 }
 
 .contact-form__inform {
-  margin-bottom: 55px;
+  margin-bottom: 43px;
 }
 
 .modal-contact__form input,
@@ -1716,42 +1785,42 @@ fieldset.filters__bluetooth {
   outline: none;
   border: none;
   background: var(--aditional-modal-grey);
-  padding: 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 16px;
   border: 2px solid transparent;
 }
 
 .modal-contact__form input {
   width: 360px;
+  padding: 14px 20px;
 }
 
 .modal-contact__form textarea {
   resize: none;
   width: 760px;
+  padding: 14px 20px 20px 20px;
 }
 
 .contact-form__button {
   color: inherit;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
-  width: 220px;
+  width: 200px;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
   border: none;
-  background: inherit;
   outline: none;
-  padding: 10px 43px 10px 38px;
+  padding: 10px 0;
   background: linear-gradient(
     to bottom,
-    var(--basic-white) 16px,
-    var(--additional-yellow) 16px,
-    var(--additional-yellow) 24px,
-    var(--basic-white) 24px
+    var(--basic-white) 18px,
+    var(--additional-yellow) 18px,
+    var(--additional-yellow) 25px,
+    var(--basic-white) 25px
   );
 }
 
@@ -1783,7 +1852,7 @@ fieldset.filters__bluetooth {
   position: fixed;
   display: none;
   width: 958px;
-  padding: 90px 100px;
+  padding: 90px 100px 58px 100px;
   left: 50%;
   top: 50%;
   margin-left: -480px;
@@ -1828,13 +1897,13 @@ fieldset.filters__bluetooth {
 }
 
 .modal-map__cross {
-  top: 42px;
-  right: 48px;
+  top: 18px;
+  right: 18px;
 }
 
 .modal-contact__cross {
-  top: 22px;
-  right: 22px;
+  top: 18px;
+  right: 18px;
 }
 
 .modal-map__cross:hover,

@@ -112,14 +112,14 @@
         <div class="main__slider slider">
           <ul class="slider__nav slider-nav">
             <li class="slider-nav__item slider-nav__item--active">
+              <a href="#" class="slider-nav__link">
+              </a>
+            </li>
+            <li class="slider-nav__item" data-index-slider="2">
               <a href="#">
               </a>
             </li>
-            <li class="slider-nav__item">
-              <a href="#">
-              </a>
-            </li>
-            <li class="slider-nav__item">
+            <li class="slider-nav__item" data-index-slider="3">
               <a href="#">
               </a>
             </li>
@@ -300,7 +300,7 @@
             </a>
           </li>
         </ul>
-        <div class="services__item services-item visually-hidden">
+        <div class="services__item services-item services__item--active">
           <div class="services-item__info services-item__info--delivery">
             <span class="services-item__title">Доставка</span>
             <p class="services-item__text">
@@ -311,7 +311,7 @@
           </div>
         </div>
         <div class="services__item services-item">
-          <div class="services-item__info services-item__info--wrranty">
+          <div class="services-item__info services-item__info--warranty">
             <span class="services-item__title">Гарантия</span>
             <p class="services-item__text">
               Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
@@ -320,7 +320,7 @@
             </p>
           </div>
         </div>
-        <div class="services__item services-item visually-hidden">
+        <div class="services__item services-item">
           <div class="services-item__info services-item__info--credit">
             <span class="services-item__title">Кредит</span>
             <p class="services-item__text">
@@ -367,11 +367,11 @@
         <div class="info__about info-about">
           <h3 class="info-about__title">О нас</h3>
           <p class="info-about__text">
-            Огромный выбор гаджетов не оставит равнодушным гика, который есть
+            Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть
             в каждом из нас.
           </p>
-          <p class="info-about__text">
-            Мы можем доставить ваш товар в самые отдаленные точки России!
+          <p class="info-about__text info-about__text--last">
+            Мы можем доставить ваш товар в самые отдаленные точки<br>России!
             DEVICE работает со многими транспортными компаниями:
           </p>
           <ul class="info-about__list">
@@ -453,7 +453,10 @@
             </li>
           </ul>
         </nav>
-        <a class="footer__tel" href="tel:+74954959595">+7 (495) 495-95-95 </a>
+        <span class="footer__tel">Teл:
+          <!--Нужен span, иначе слово "Тел:" не подагнать в пиксель-->
+          <a href="tel:+74954959595">+7 (495) 495-95-95 </a>
+        </span>
       </div>
       <div class="footer__row">
         <ul class="footer__socials footer-socials">
@@ -499,7 +502,7 @@
       </div>
       <div class="contact-form__inform">
         <label for="contact-inform">Текст письма</label>
-        <textarea id="contact-inform" required placeholder="В свободной форме" rows="7"></textarea>
+        <textarea id="contact-inform" required placeholder="В свободной форме" rows="8"></textarea>
       </div>
       <button type="submit" class="contact-form__button">
         Отправить

@@ -13,7 +13,8 @@ map.addEventListener('click', () => {
   mapModal.classList.add('modal__map--show');
 });
 
-mapCloseBtn.addEventListener('click', () => {
+mapCloseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   mapModal.classList.remove('modal__map--show');
 });
 

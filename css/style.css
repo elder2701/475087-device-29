@@ -224,12 +224,12 @@ img {
 
 .header-navigation__submenu ul {
   list-style: none;
-  padding: 20px 0 0;
-  margin: 0 63px 0 0;
+  padding: 32px 0 0;
+  margin: 0 63px 42px 0;
 }
 
-.submenu__item {
-  margin-bottom: 20px;
+.submenu__item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .submenu__link {
@@ -346,7 +346,7 @@ img {
 /*slider*/
 
 .main__slider {
-  margin-bottom: 114px;
+  margin-bottom: 109px;
   position: relative;
 }
 

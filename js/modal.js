@@ -20,6 +20,13 @@ const serviceSliderPanels = document.getElementsByClassName("services__item");
 const activeServiceSliderBtnClass = "services-menu__item--active";
 const activeServiceSliderPanelClass = "services__item--active";
 
+const contactModal = document.querySelector(".modal__contact");
+const contactForm = document.querySelector(".modal-contact__form");
+const submitContactFormBtn = document.querySelector(".contact-form__button");
+const contactFormControls = document.getElementsByClassName(
+  "contact-form__control"
+);
+
 function clearActiveClass(elements, activeClassName) {
   const elementCount = elements.length;
   for (let i = 0; i < elementCount; i++) {
@@ -50,6 +57,7 @@ formCloseBtn.addEventListener("click", () => {
 });
 
 /*Главный слайдер*/
+
 mainSliderControl.addEventListener("click", (e) => {
   e.preventDefault();
   for (let i = 0; i < mainSliderBtns.length; i++) {
@@ -76,4 +84,18 @@ serviceSliderControl.addEventListener("click", (e) => {
       serviceSliderPanels[i].classList.add(activeServiceSliderPanelClass);
     }
   }
+});
+
+/*Валидация формы*/
+submitContactFormBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const countControl = contactFormControls.length;
+  for (let i = 0; i < countControl; i++) {
+    if (!contactFormControls[i].value) {
+      contactModal.classList.add("modal__contact--error");
+      contactForm.reportValidity();
+      return;
+    }
+  }
+  contactForm.submit();
 });

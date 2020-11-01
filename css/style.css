@@ -24,6 +24,42 @@
 }
 /*End Fonts*/
 
+/*animations*/
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
+  70% {
+    transform: translateX(30px);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-20px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(20px);
+  }
+}
+
 :root {
   --basic-black: #000000;
   --basic-dark-grey: #363636;
@@ -191,6 +227,7 @@ img {
   position: absolute;
   top: -17px;
   right: -83px;
+  cursor: pointer;
 }
 
 .search__button:hover {
@@ -544,26 +581,85 @@ img {
   margin: 0;
 }
 
-.popular-item__pic {
-  background: var(--additional-light-yellow);
-  width: 160px;
-  height: 160px;
-  display: flex;
-  margin-bottom: 38px;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-popular__item:hover .popular-item__pic {
-  background: var(--additional-yellow);
-}
-
 .popular-item__link {
   display: block;
+  position: relative;
+  padding-top: 199px;
 }
 
-.popular-item__link:active img {
+.popular-item__link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: var(--additional-light-yellow);
+  transform: translateY(-124%);
+}
+
+.popular-item__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.popular-item__link--virtual::after {
+  background: url(/img/virtual-reality.png) no-repeat;
+  background-size: 97px 55px;
+  width: 97px;
+  height: 55px;
+  top: 53px;
+}
+
+.popular-item__link--monopod::after {
+  background: url(/img/monopod.png) no-repeat;
+  background-size: 86px 117px;
+  width: 86px;
+  height: 117px;
+  top: 27px;
+}
+
+.popular-item__link--camera::after {
+  background: url(/img/camera.png) no-repeat;
+  background-size: 71px 87px;
+  width: 71px;
+  height: 87px;
+  top: 37px;
+}
+
+.popular-item__link--fitband::after {
+  background: url(/img/fitband.png) no-repeat;
+  background-size: 107px 65px;
+  width: 107px;
+  height: 65px;
+  top: 49px;
+}
+
+.popular-item__link--watch::after {
+  background: url(/img/watch.png) no-repeat;
+  background-size: 56px 98px;
+  width: 56px;
+  height: 98px;
+  top: 32px;
+}
+
+.popular-item__link--copter::after {
+  background: url(/img/copter.png) no-repeat;
+  background-size: 132px 69px;
+  width: 132px;
+  height: 69px;
+  top: 47px;
+}
+
+.popular-item__link:active::after {
   opacity: 0.3;
+}
+
+.popular-item__link:hover::before {
+  background: var(--additional-yellow);
 }
 
 .popular-item__link:active .popular-item__title {
@@ -592,15 +688,12 @@ img {
   display: flex;
 }
 
-
-
 .services-item__info {
   position: relative;
   padding-top: 3px;
 }
 
-.services-item__info--delivery::before
- {
+.services-item__info--delivery::before {
   content: "";
   width: 136px;
   height: 164px;
@@ -608,7 +701,7 @@ img {
   display: block;
   background: url(/img/delivery.png) no-repeat;
   background-size: 136px 164px;
-  right: -51px;
+  right: -87px;
   transform: translateX(100%);
 }
 
@@ -650,7 +743,7 @@ img {
   position: absolute;
   height: 322px;
   width: 7px;
-  transform: translate(0,-82%);
+  transform: translate(0, -82%);
   right: 108px;
   background: var(--basic-black);
 }
@@ -774,7 +867,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
-  padding-top: 53px
+  padding-top: 53px;
 }
 
 .info-about,
@@ -1253,6 +1346,7 @@ fieldset.filters__bluetooth {
   color: inherit;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
+  cursor: pointer;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.5px;
@@ -1841,11 +1935,14 @@ fieldset.filters__bluetooth {
   top: 50%;
   margin-left: -480px;
   margin-top: -280px;
+  background-image: url(/img/map-big.png);
+  background: #ffffff;
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
 
 .modal__map--show {
   display: block;
+  animation: bounce 1s;
 }
 
 .modal__contact {
@@ -1861,8 +1958,13 @@ fieldset.filters__bluetooth {
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
 
+.modal__contact--error {
+  animation: shake 1s;
+}
+
 .modal__contact--show {
   display: block;
+  animation: bounce 1s;
 }
 
 .contact-form__email input:focus,
@@ -1878,9 +1980,9 @@ fieldset.filters__bluetooth {
 }
 
 /*TODO Почему значиние invalid - стоит по умолчанию. имею ввиду, что красится при открытии всегда в красный цвет. как исправить???*/
-.contact-form__email input:invalid,
-.contact-form__name input:invalid,
-.contact-form__inform textarea:invalid {
+.modal__contact--error input:invalid,
+.modal__contact--error input:invalid,
+.modal__contact--error textarea:invalid {
   background: var(--status-pink);
 }
 

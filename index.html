@@ -229,50 +229,32 @@
         </div>
         <ul class="main__popular main-popular">
           <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-1.png" width="97" height="55" alt="Виртуальная реальность" />
-              </div>
+            <a href="#" class="popular-item__link popular-item__link--virtual">
               <h3 class="popular-item__title">Виртуальная рельность</h3>
             </a>
           </li>
           <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи" />
-              </div>
+            <a href="#" class="popular-item__link popular-item__link--monopod">
               <h3 class="popular-item__title">Моноподы для&nbsp;селфи</h3>
             </a>
           </li>
           <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-3.png" width="71" height="87" alt="Экшен-камеры" />
-              </div>
+            <a href="#" class="popular-item__link popular-item__link--camera">
               <h3 class="popular-item__title">Экшен-камеры</h3>
             </a>
           </li>
           <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-4.png" width="107" height="65" alt="Фитнес-браслеты" />
-              </div>
+            <a href="#" class="popular-item__link popular-item__link--fitband">
               <h3 class="popular-item__title">Фитнес-браслеты</h3>
             </a>
           </li>
           <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-5.png" width="56" height="98" alt="Умные часы" />
-              </div>
+            <a href="#" class="popular-item__link popular-item__link--watch">
               <h3 class="popular-item__title">Умные часы</h3>
             </a>
           </li>
           <li class="main-popular__item popular-item">
-            <a href="#" class="popular-item__link">
-              <div class="popular-item__pic">
-                <img src="img/popular-6.png" width="132" height="69" alt="Квадрокоптеры" />
-              </div>
+            <a href="#" class="popular-item__link popular-item__link--copter">
               <h3 class="popular-item__title">Квадрокоптеры</h3>
             </a>
           </li>
@@ -493,16 +475,19 @@
       <div class="contact-form__row">
         <div class="contact-form__name">
           <label for="contact-name">Ваше имя</label>
-          <input id="contact-name" required type="text" name="contact-firstname" placeholder="Имя Фамилия" />
+          <input id="contact-name" class="contact-form__control" required type="text" name="contact-firstname"
+            placeholder="Имя Фамилия" />
         </div>
         <div class="contact-form__email">
           <label for="contact-email">Ваш e-mail</label>
-          <input id="contact-email" required type="email" name="contact-email" placeholder="email@example.com" />
+          <input id="contact-email" class="contact-form__control" required type="email" name="contact-email"
+            placeholder="email@example.com" />
         </div>
       </div>
       <div class="contact-form__inform">
         <label for="contact-inform">Текст письма</label>
-        <textarea id="contact-inform" required placeholder="В свободной форме" rows="8"></textarea>
+        <textarea id="contact-inform" class="contact-form__control" required placeholder="В свободной форме"
+          rows="8"></textarea>
       </div>
       <button type="submit" class="contact-form__button">
         Отправить

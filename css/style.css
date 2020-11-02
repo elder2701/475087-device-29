@@ -607,7 +607,7 @@ img {
 }
 
 .popular-item__link--virtual::after {
-  background: url(/img/virtual-reality.png) no-repeat;
+  background: url(../img/virtual-reality.png) no-repeat;
   background-size: 97px 55px;
   width: 97px;
   height: 55px;
@@ -615,7 +615,7 @@ img {
 }
 
 .popular-item__link--monopod::after {
-  background: url(/img/monopod.png) no-repeat;
+  background: url(../img/monopod.png) no-repeat;
   background-size: 86px 117px;
   width: 86px;
   height: 117px;
@@ -623,7 +623,7 @@ img {
 }
 
 .popular-item__link--camera::after {
-  background: url(/img/camera.png) no-repeat;
+  background: url(../img/camera.png) no-repeat;
   background-size: 71px 87px;
   width: 71px;
   height: 87px;
@@ -631,7 +631,7 @@ img {
 }
 
 .popular-item__link--fitband::after {
-  background: url(/img/fitband.png) no-repeat;
+  background: url(../img/fitband.png) no-repeat;
   background-size: 107px 65px;
   width: 107px;
   height: 65px;
@@ -639,7 +639,7 @@ img {
 }
 
 .popular-item__link--watch::after {
-  background: url(/img/watch.png) no-repeat;
+  background: url(../img/watch.png) no-repeat;
   background-size: 56px 98px;
   width: 56px;
   height: 98px;
@@ -647,7 +647,7 @@ img {
 }
 
 .popular-item__link--copter::after {
-  background: url(/img/copter.png) no-repeat;
+  background: url(../img/copter.png) no-repeat;
   background-size: 132px 69px;
   width: 132px;
   height: 69px;
@@ -699,7 +699,7 @@ img {
   height: 164px;
   position: absolute;
   display: block;
-  background: url(/img/delivery.png) no-repeat;
+  background: url(../img/delivery.png) no-repeat;
   background-size: 136px 164px;
   right: -87px;
   transform: translateX(100%);
@@ -711,7 +711,7 @@ img {
   height: 195px;
   position: absolute;
   display: block;
-  background: url(/img/warranty.png) no-repeat;
+  background: url(../img/warranty.png) no-repeat;
   background-size: 171px 195px;
   right: -51px;
   transform: translateX(100%);
@@ -723,7 +723,7 @@ img {
   height: 188px;
   position: absolute;
   display: block;
-  background: url(/img/credit.png) no-repeat;
+  background: url(../img/credit.png) no-repeat;
   background-size: 156px 188px;
   right: -51px;
   transform: translateX(100%);
@@ -1935,7 +1935,7 @@ fieldset.filters__bluetooth {
   top: 50%;
   margin-left: -480px;
   margin-top: -280px;
-  background-image: url(/img/map-big.png);
+  background-image: url(../img/map-big.png);
   background: #ffffff;
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }

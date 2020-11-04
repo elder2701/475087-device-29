@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Алексей Румянцев](https://up.htmlacademy.ru/htmlcss/29/user/475087).
-* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
+* Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
 
 ---
 

@@ -1260,14 +1260,6 @@ img {
   font-size: 14px;
 }
 
-.filter-colors__item {
-  padding-left: 42px;
-}
-
-.filter-bluetooth__item {
-  padding-left: 40px;
-}
-
 .filter-bluetooth__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -1282,10 +1274,19 @@ img {
   user-select: none;
 }
 
+.filter-bluetooth__item label {
+  padding-left: 40px;
+}
+
+.filter-colors__control {
+  padding-left: 42px;
+}
+
+
 .filters-colors__checkbox + .filters-colors__tick {
   position: absolute;
   top: 4px;
-  left: -42px;
+  left: 0;
   transform: translateY(-25%);
   height: 23px;
   width: 24px;
@@ -1316,8 +1317,12 @@ img {
   background: var(--basic-black);
 }
 
-.filters-colors__tick:hover {
+.filter-colors__control:hover {
   opacity: 0.6;
+}
+
+.filter-colors__control:active {
+  opacity: 1;
 }
 
 .filter-colors__control:focus-within {
@@ -1337,7 +1342,7 @@ img {
 .filter-bluetooth__radio + label::before {
   content: "";
   position: absolute;
-  left: -40px;
+  left: 0;
   top: -1px;
   width: 24px;
   height: 24px;
@@ -1349,7 +1354,7 @@ img {
   content: "";
   position: absolute;
   top: 7px;
-  left: -32px;
+  left: 8px;
   width: 8px;
   height: 8px;
   background: var(--basic-black);

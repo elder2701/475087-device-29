@@ -1674,8 +1674,8 @@ img {
   padding: 10px 36px 10px 34px;
   background: linear-gradient(
     to bottom,
-    transparent 19px,
-    var(--additional-yellow) 19px,
+    transparent 16px,
+    var(--additional-yellow) 16px,
     var(--additional-yellow) 25px,
     transparent 25px
   );

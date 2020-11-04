@@ -230,12 +230,13 @@ img {
   visibility: visible;
 }
 
-.search__button:hover, .search__button:focus {
+.search__button:hover,
+.search__button:focus {
   background: var(--basic-black);
   color: var(--basic-white);
 }
 
-.header__search:focus-within .search__button{
+.header__search:focus-within .search__button {
   visibility: visible;
 }
 
@@ -354,9 +355,8 @@ img {
   margin-left: 60px;
 }
 
-.user-panel__link--user span{
+.user-panel__link--user span {
   width: 129px;
-
 }
 
 .user-panel__item {
@@ -1142,7 +1142,9 @@ img {
   width: 270px;
 }
 
-.filters__price,.filters__colors,.filters__bluetooth {
+.filters__price,
+.filters__colors,
+.filters__bluetooth {
   padding: 0;
   margin: 0;
   border: none;
@@ -1322,12 +1324,6 @@ img {
   opacity: 0.6;
 }
 
-
-.filters-colors__tick:active,
-.filters-colors__tick:checked:active {
-  opacity: 1;
-}
-
 .filter-bluetooth__title {
   margin-bottom: 33px;
 }
@@ -1376,9 +1372,8 @@ img {
   opacity: 1;
 }
 
-.filter-bluetooth__item label:focus-within {
-  opacity: 0.6; /*TODO тут tab не работает. возможно потому что тут нету спан. я использовал только псевдо элементы в отличии от чекбоксов
-  */
+.filter-bluetooth__item:focus-within label {
+  opacity: 0.6;
 }
 
 .filters__button {
@@ -1767,7 +1762,7 @@ img {
   max-width: 162px;
 }
 
-.footer-panel__link--user span{
+.footer-panel__link--user span {
   width: 129px;
 }
 

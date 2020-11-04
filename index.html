@@ -20,16 +20,16 @@
         </a>
       </div>
       <div class="header__row">
-        <form class="header__search search" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="header__search search" action="https://echo.htmlacademy.ru/" method="post" tabindex="0">
           <svg width="16" height="16">
             <use xlink:href="img/sprite.svg#search"></use>
           </svg>
-          <input class="search__input" type="text" placeholder="Поиск по сайту" />
+          <input class="search__input" required type="text" placeholder="Поиск по сайту" />
           <button type="submit" class="search__button">Найти</button>
         </form>
         <ul class="header__panel user-panel">
           <li class="user-panel__item user-panel__item--login">
-            <a href="#">
+            <a href="#" class="user-panel__link">
               <svg width="13" height="14">
                 <use xlink:href="img/sprite.svg#user"></use>
               </svg>
@@ -37,7 +37,7 @@
             </a>
           </li>
           <li class="user-panel__item">
-            <a href="#">
+            <a href="#" class="user-panel__link">
               <svg width="14" height="14">
                 <use xlink:href="img/sprite.svg#compare"></use>
               </svg>
@@ -45,7 +45,7 @@
             </a>
           </li>
           <li class="user-panel__item">
-            <a href="#">
+            <a href="#" class="user-panel__link">
               <svg width="10" height="10">
                 <use xlink:href="img/sprite.svg#trush"></use>
               </svg>
@@ -55,7 +55,7 @@
         </ul>
       </div>
       <nav class="header__row header-navigation header__row--mainpage">
-        <div class="header-navigation__menu">
+        <div class="header-navigation__menu" tabindex="0">
           <a class="header-navigation__link navigation-contact" href="#">
             Каталог товаров
             <svg width="22" height="22">
@@ -393,7 +393,7 @@
         </a>
         <ul class="footer__panel footer-panel">
           <li class="footer-panel__item">
-            <a href="#">
+            <a href="#" class="footer-panel__link">
               <svg width="13" height="14" fill="#f0c52e">
                 <use xlink:href="img/sprite.svg#user"></use>
               </svg>
@@ -401,7 +401,7 @@
             </a>
           </li>
           <li class="footer-panel__item">
-            <a href="#">
+            <a href="#" class="footer-panel__link">
               <svg width="14" height="14" fill="#f0c52e">
                 <use xlink:href="img/sprite.svg#compare"></use>
               </svg>
@@ -409,7 +409,7 @@
             </a>
           </li>
           <li class="footer-panel__item">
-            <a href="#">
+            <a href="#" class="footer-panel__link">
               <svg width="10" height="10" fill="#f0c52e">
                 <use xlink:href="img/sprite.svg#trush"></use>
               </svg>
@@ -501,7 +501,7 @@
       width="960" height="560" style="border:0" allowfullscreen></iframe>
     <button type="button" class="modal-map__cross"></button>
   </section>
-  <script src="js/modal.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

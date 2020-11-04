@@ -80,7 +80,9 @@
   --aditional-modal-grey: #f2f2f2;
   --aditional-button-black: rgba(0, 0, 0, 0.3);
   --special-bar-color: rgba(0, 0, 0, 0.2);
+  --special-range-black: rgba(0, 0, 0, 0.18);
   --special-from-color: #eaeaea;
+  --special-range-grey: #c4c4c4;
 
   --status-pink: #f6dada;
 }
@@ -157,7 +159,7 @@ img {
 }
 
 .header__logo {
-  margin-bottom: 26px;
+  margin-bottom: 9px;
 }
 
 .header__logo a:hover {
@@ -172,18 +174,20 @@ img {
   display: flex;
   justify-content: space-between;
   padding-bottom: 36px;
+  align-items: center;
 }
 
 .header__search {
   display: flex;
-  justify-content: center;
   position: relative;
+  width: 440px;
+  align-items: flex-end;
 }
 
 .header__search svg {
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 20px;
 }
 
 .search__input {
@@ -198,11 +202,6 @@ img {
 
 .search__input:focus {
   border-bottom: 2px solid var(--basic-black);
-}
-
-.search__input:focus ~ .search__button {
-  pointer-events: auto;
-  display: block;
 }
 
 .search__input::placeholder {
@@ -221,22 +220,32 @@ img {
   padding: 15px;
   text-transform: uppercase;
   background: inherit;
-  display: none;
-  pointer-events: none;
-  position: absolute;
   top: -17px;
   right: -83px;
+  visibility: hidden;
   cursor: pointer;
 }
 
-.search__button:hover {
+.search__input:focus + .search__button {
+  visibility: visible;
+}
+
+.search__button:hover, .search__button:focus {
   background: var(--basic-black);
-  display: block;
   color: var(--basic-white);
+}
+
+.header__search:focus-within .search__button{
+  visibility: visible;
+}
+
+.header__search:focus-within .search__input {
+  border-bottom: 2px solid var(--basic-black);
 }
 
 .search__button:active {
   color: var(--additional-opacity-white);
+  visibility: visible;
 }
 
 .header-navigation {
@@ -251,7 +260,7 @@ img {
   width: 1100px;
   display: none;
   z-index: 10;
-  background-color: var(--additional-light-yellow);
+  background: var(--additional-light-yellow);
 }
 
 .submenu:hover {
@@ -297,7 +306,7 @@ img {
   color: var(--basic-black);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 
 .header__panel svg {
@@ -330,6 +339,10 @@ img {
   display: flex;
 }
 
+.header-navigation__menu:focus-within .submenu {
+  display: flex;
+}
+
 .header__panel a:active,
 .header-navigation__list a:active,
 .header-navigation__menu a:active {
@@ -341,9 +354,18 @@ img {
   margin-left: 60px;
 }
 
+.user-panel__link--user span{
+  width: 129px;
+
+}
+
+.user-panel__item {
+  margin-top: 3px;
+}
+
 .user-panel__item--active {
   display: flex;
-  padding-bottom: 14px;
+  align-items: flex-start;
 }
 
 .user-panel__item--active .user-panel__link:last-child {
@@ -352,8 +374,11 @@ img {
 }
 
 .user-panel__item--login {
-  min-width: 404px;
-  padding-left: 30px;
+  min-width: 322px;
+}
+
+.user-panel__item--login .user-panel__link {
+  padding-right: 53px;
 }
 
 .header-navigation__list a {
@@ -801,7 +826,7 @@ img {
 }
 
 .services-menu__item--active {
-  background-color: var(--basic-black);
+  background: var(--basic-black);
 }
 
 .services-menu__item--active a {
@@ -810,7 +835,7 @@ img {
 }
 
 .services-menu__item--active a:hover {
-  background-color: var(--basic-black);
+  background: var(--basic-black);
 }
 
 .services-menu__item--active a:active {
@@ -1006,7 +1031,7 @@ img {
 
 .catalog__panel {
   background: var(--basic-white);
-  padding-bottom: 79px;
+  padding-bottom: 81px;
 }
 
 .catalog__filters {
@@ -1092,14 +1117,6 @@ img {
   transform: rotate(135deg) translateY(25%);
 }
 
-.breadcrumbs__item a:active::after {
-  opacity: 1; /*TODO как скомбинировать active и after так, чтобы стрелка при ховере на ссылку не выделялась????*/
-}
-
-.breadcrumbs__item a:hover::after {
-  opacity: 1; /*TODO как скомбинировать ховер и after так, чтобы стрелка при ховере на ссылку не выделялась????*/
-}
-
 .filters-header .container {
   padding-left: 60px;
 }
@@ -1108,8 +1125,7 @@ img {
   background: var(--aditional-grey);
   display: flex;
   align-items: center;
-  min-width: 270px; /*TODO Поясни почему мне нужно тут ставить min.
-  я не понимаю, почему просто width:270 не работает(ширина меньше 270 будет)*/
+  min-width: 270px;
 }
 
 .filters-header__title h2 {
@@ -1126,7 +1142,7 @@ img {
   width: 270px;
 }
 
-.filters__form fieldset {
+.filters__price,.filters__colors,.filters__bluetooth {
   padding: 0;
   margin: 0;
   border: none;
@@ -1143,15 +1159,15 @@ img {
   top: -16px;
 }
 
-fieldset.filters__price {
+.filters__price {
   margin-bottom: 53px;
 }
 
-fieldset.filters__colors {
-  margin-bottom: 54px;
+.filters__colors {
+  margin-bottom: 55px;
 }
 
-fieldset.filters__bluetooth {
+.filters__bluetooth {
   margin-bottom: 44px;
 }
 
@@ -1179,13 +1195,13 @@ fieldset.filters__bluetooth {
 
 .range__scale {
   height: 2px;
-  background-color: var(--special-bar-color);
+  background: var(--special-bar-color);
 }
 
 .range__bar {
   height: 2px;
   width: 120px;
-  background-color: var(--additional-green);
+  background: var(--additional-green);
 }
 
 .range__toggle {
@@ -1196,13 +1212,13 @@ fieldset.filters__bluetooth {
   height: 4px;
   border: 8px solid var(--basic-white);
   border-radius: 50%;
-  background-color: #c4c4c4;
+  background: var(--special-range-grey);
   cursor: pointer;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 2px var(--special-range-black);
 }
 
 .range__toggle--min {
-  left: 0px;
+  left: 0;
 }
 
 .range__toggle--max {
@@ -1250,9 +1266,12 @@ fieldset.filters__bluetooth {
   padding-left: 40px;
 }
 
-.filter-colors__item:not(:last-child),
 .filter-bluetooth__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.filter-colors__item:not(:last-child) {
+  margin-bottom: 21px;
 }
 
 .filter-colors__item label {
@@ -1281,7 +1300,7 @@ fieldset.filters__bluetooth {
   height: 2px;
   width: 5px;
   transform: rotate(45deg);
-  background-color: var(--basic-black);
+  background: var(--basic-black);
 }
 
 .filters-colors__checkbox:checked + .filters-colors__tick::after {
@@ -1292,16 +1311,20 @@ fieldset.filters__bluetooth {
   height: 2px;
   width: 11px;
   transform: rotate(-45deg);
-  background-color: var(--basic-black);
+  background: var(--basic-black);
 }
 
-.filters-colors__checkbox + .filters-colors__tick:hover,
-.filters-colors__checkbox + .filters-colors__tick:hover {
+.filters-colors__tick:hover {
   opacity: 0.6;
 }
 
-.filters-colors__checkbox + .filters-colors__tick:active,
-.filters-colors__checkbox + .filters-colors__tick:checked:active {
+.filter-colors__control:focus-within {
+  opacity: 0.6;
+}
+
+
+.filters-colors__tick:active,
+.filters-colors__tick:checked:active {
   opacity: 1;
 }
 
@@ -1333,7 +1356,7 @@ fieldset.filters__bluetooth {
   left: -32px;
   width: 8px;
   height: 8px;
-  background-color: var(--basic-black);
+  background: var(--basic-black);
   border-radius: 50%;
 }
 
@@ -1353,6 +1376,11 @@ fieldset.filters__bluetooth {
   opacity: 1;
 }
 
+.filter-bluetooth__item label:focus-within {
+  opacity: 0.6; /*TODO тут tab не работает. возможно потому что тут нету спан. я использовал только псевдо элементы в отличии от чекбоксов
+  */
+}
+
 .filters__button {
   color: inherit;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -1364,8 +1392,6 @@ fieldset.filters__bluetooth {
   text-transform: uppercase;
   position: relative;
   border: none;
-  background: inherit;
-  padding: 0;
   outline: none;
   padding: 10px 43px 10px 38px;
   background: linear-gradient(
@@ -1378,6 +1404,9 @@ fieldset.filters__bluetooth {
 }
 
 .filters__button:hover {
+  background: var(--additional-yellow);
+}
+.filters__button:focus {
   background: var(--additional-yellow);
 }
 
@@ -1511,9 +1540,15 @@ fieldset.filters__bluetooth {
 }
 
 .catalog-item__stuff:hover .catalog-item__menu {
-  /*opacity: 0.7;*/
   display: flex;
-  transition: opacity 0.5s;
+}
+
+.catalog-item__stuff:focus .catalog-item__menu {
+  display: flex;
+}
+
+.catalog-item__stuff:focus-within .catalog-item__menu {
+  display: flex;
 }
 
 .catalog-item__info {
@@ -1578,7 +1613,6 @@ fieldset.filters__bluetooth {
 }
 
 .pagination__button {
-  /*TODO я тут вместо padding top/bottom хотел указать height 100%, чтобы расширить элемент. но это не работает, почему? */
   display: block;
   height: 100%;
   padding: 24px 29px;
@@ -1725,12 +1759,16 @@ fieldset.filters__bluetooth {
   margin-left: 24px;
 }
 
-.footer-panel__item a {
+.footer-panel__link {
   color: var(--basic-white);
   opacity: 0.7;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   max-width: 162px;
+}
+
+.footer-panel__link--user span{
+  width: 129px;
 }
 
 .footer-panel__item a:hover {
@@ -1750,7 +1788,7 @@ fieldset.filters__bluetooth {
   font-style: normal;
   display: flex;
   align-items: center;
-  width: 203;
+  width: 203px;
 }
 
 .footer__socials {
@@ -1777,7 +1815,7 @@ fieldset.filters__bluetooth {
   height: 7px;
   width: 80px;
   position: absolute;
-  background-color: var(--additional-yellow);
+  background: var(--additional-yellow);
   left: 0;
   top: 12px;
 }
@@ -1890,7 +1928,6 @@ fieldset.filters__bluetooth {
 .modal-contact__form input,
 .modal-contact__form textarea {
   outline: none;
-  border: none;
   background: var(--aditional-modal-grey);
   font-style: normal;
   font-weight: normal;
@@ -1949,8 +1986,8 @@ fieldset.filters__bluetooth {
   margin-left: -480px;
   margin-top: -280px;
   background-image: url(../img/map-big.png);
-  background: #ffffff;
-  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  background: var(--basic-white);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
 }
 
 .modal__map--show {
@@ -1967,8 +2004,8 @@ fieldset.filters__bluetooth {
   top: 50%;
   margin-left: -480px;
   margin-top: -275px;
-  background-color: var(--basic-white);
-  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  background: var(--basic-white);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
 }
 
 .modal__contact--show {
@@ -1992,7 +2029,6 @@ fieldset.filters__bluetooth {
   background: var(--special-from-color);
 }
 
-/*TODO Почему значиние invalid - стоит по умолчанию. имею ввиду, что красится при открытии всегда в красный цвет. как исправить???*/
 .modal__contact--error input:invalid,
 .modal__contact--error input:invalid,
 .modal__contact--error textarea:invalid {
@@ -2006,7 +2042,7 @@ fieldset.filters__bluetooth {
   height: 55px;
   background: var(--additional-yellow);
   opacity: 0.5;
-  border: 0;
+  border: none;
   border-radius: 29px;
   outline: none;
 }
@@ -2039,7 +2075,7 @@ fieldset.filters__bluetooth {
   content: " ";
   height: 33px;
   width: 2px;
-  background-color: var(--basic-white);
+  background: var(--basic-white);
 }
 
 .modal-map__cross:before,
@@ -2050,7 +2086,7 @@ fieldset.filters__bluetooth {
   content: " ";
   height: 33px;
   width: 2px;
-  background-color: var(--basic-white);
+  background: var(--basic-white);
 }
 .modal-map__cross:before,
 .modal-contact__cross::before {

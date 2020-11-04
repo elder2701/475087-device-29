@@ -24,16 +24,16 @@
           <svg width="16" height="16">
             <use xlink:href="img/sprite.svg#search"></use>
           </svg>
-          <input class="search__input" type="text" placeholder="Поиск по сайту" />
+          <input class="search__input" required type="text" placeholder="Поиск по сайту" />
           <button type="submit" class="search__button">Найти</button>
         </form>
         <ul class="header__panel user-panel">
           <li class="user-panel__item user-panel__item--active">
-            <a class="user-panel__link" href="profile.html">
+            <a class="user-panel__link user-panel__link--user" href="profile.html">
               <svg width="13" height="14">
                 <use xlink:href="img/sprite.svg#user"></use>
               </svg>
-              Валентин Петухов
+              <span>Валентин Петухов</span>
             </a>
             <a href="#" class="user-panel__link">Выйти</a>
           </li>
@@ -56,7 +56,7 @@
         </ul>
       </div>
       <nav class="header__row header-navigation">
-        <div class="header-navigation__menu">
+        <div class="header-navigation__menu" tabindex="0">
           <a class="header-navigation__link navigation-contact" href="#">Каталог товаров
             <svg width="22" height="22">
               <use xlink:href="img/sprite.svg#plus"></use>
@@ -239,7 +239,7 @@
           <div class="catalog__panel">
             <ul class="catalog__list">
               <li class="catalog__item catalog-item">
-                <div class="catalog-item__stuff">
+                <div class="catalog-item__stuff" tabindex="0">
                   <img src="img/catalog-1.jpg" width="360" height="380" alt="Любительская селфи-палка" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
@@ -261,7 +261,7 @@
                 </div>
               </li>
               <li class="catalog__item catalog-item">
-                <div class="catalog-item__stuff">
+                <div class="catalog-item__stuff" tabindex="0">
                   <img src="img/catalog-2.jpg" width="360" height="380" alt="Профессиональнаяселфи-палка" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
@@ -286,7 +286,7 @@
                 </div>
               </li>
               <li class="catalog__item catalog-item">
-                <div class="catalog-item__stuff">
+                <div class="catalog-item__stuff" tabindex="0">
                   <img src="img/catalog-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
@@ -312,7 +312,7 @@
                 </div>
               </li>
               <li class="catalog__item catalog-item">
-                <div class="catalog-item__stuff">
+                <div class="catalog-item__stuff" tabindex="0">
                   <img src="img/catalog-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»" />
                   <div class="catalog-item__menu item-menu">
                     <a href="#" class="item-menu__adding">
@@ -366,18 +366,18 @@
         </a>
         <ul class="footer__panel footer-panel">
           <li class="footer-panel__item">
-            <a href="#">
+            <a href="#" class="footer-panel__link footer-panel__link--user">
               <svg width="13" height="14" fill="#f0c52e">
                 <use xlink:href="img/sprite.svg#user"></use>
               </svg>
-              Валентин Петухов
+              <span>Валентин Петухов</span>
             </a>
           </li>
           <li class="footer-panel__item">
-            <a href="#">Выйти</a>
+            <a href="#" class="footer-panel__link">Выйти</a>
           </li>
           <li class="footer-panel__item">
-            <a href="#">
+            <a href="#" class="footer-panel__link">
               <svg width="14" height="14" fill="#f0c52e">
                 <use xlink:href="img/sprite.svg#compare"></use>
               </svg>
@@ -385,7 +385,7 @@
             </a>
           </li>
           <li class="footer-panel__item">
-            <a href="#">
+            <a href="#" class="footer-panel__link">
               <svg width="10" height="10" fill="#f0c52e">
                 <use xlink:href="img/sprite.svg#trush"></use>
               </svg>

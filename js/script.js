@@ -87,6 +87,7 @@ serviceSliderControl.addEventListener("click", (e) => {
 });
 
 /*Валидация формы*/
+
 submitContactFormBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const countControl = contactFormControls.length;

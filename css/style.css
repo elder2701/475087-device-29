@@ -177,7 +177,6 @@ img {
 .header__search {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 
@@ -448,7 +447,7 @@ img {
 }
 
 .section-base {
-  margin-bottom: 153px;
+  margin-bottom: 141px;
 }
 
 .slider__pic {
@@ -570,6 +569,10 @@ img {
   column-gap: 40px;
   margin: 0;
   padding: 0;
+}
+
+.main-popular__item {
+  margin-bottom: 10px;
 }
 
 .popular-item__title {
@@ -860,7 +863,7 @@ img {
 
 /*information*/
 .info {
-  margin-bottom: 76px;
+  margin-bottom: 77px;
 }
 
 .info__wrapper {
@@ -900,6 +903,14 @@ img {
 .info-contact__text {
   line-height: 28px;
   margin: 0 0 40px 0;
+}
+
+.info-about__text {
+  width: 474px;
+}
+
+.info-contact__text {
+  width: 506px;
 }
 
 .info-about__text--last {
@@ -1532,6 +1543,7 @@ fieldset.filters__bluetooth {
 .catalog-item__price {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
+  min-width: 78px;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1.3px;
@@ -1669,7 +1681,6 @@ fieldset.filters__bluetooth {
 .footer__row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .footer__row:nth-child(2) {
@@ -1719,6 +1730,7 @@ fieldset.filters__bluetooth {
   opacity: 0.7;
   display: flex;
   align-items: center;
+  max-width: 162px;
 }
 
 .footer-panel__item a:hover {
@@ -1738,6 +1750,7 @@ fieldset.filters__bluetooth {
   font-style: normal;
   display: flex;
   align-items: center;
+  width: 203;
 }
 
 .footer__socials {
@@ -1958,13 +1971,13 @@ fieldset.filters__bluetooth {
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
 
-.modal__contact--error {
-  animation: shake 1s;
-}
-
 .modal__contact--show {
   display: block;
   animation: bounce 1s;
+}
+
+.modal__contact--error {
+  animation: shake 1s;
 }
 
 .contact-form__email input:focus,

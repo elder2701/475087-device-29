@@ -20,11 +20,12 @@
         </a>
       </div>
       <div class="header__row header-row">
-        <form action="https://echo.htmlacademy.ru/" method="post" class="header__search">
+        <form action="https://echo.htmlacademy.ru/" method="post" class="header__search search">
           <svg width="16" height="16">
             <use xlink:href="img/sprite.svg#search"></use>
           </svg>
-          <input class="search__input" required type="text" placeholder="Поиск по сайту" />
+          <label class="search__label" for="search-input">Поиск</label>
+          <input class="search__input" id="search-input" name="search" required type="text" placeholder="Поиск по сайту" />
           <button type="submit" class="search__button">Найти</button>
         </form>
         <ul class="header__panel user-panel">
@@ -56,7 +57,7 @@
         </ul>
       </div>
       <nav class="header__row header-navigation">
-        <div class="header-navigation__menu" tabindex="0">
+        <div class="header-navigation__menu">
           <a class="header-navigation__link navigation-contact" href="#">Каталог товаров
             <svg width="22" height="22">
               <use xlink:href="img/sprite.svg#plus"></use>
@@ -163,10 +164,10 @@
                 <div class="range__toggle range__toggle--max"></div>
               </div>
               <div class="filter-price__price price">
-                <label class="price__control price__control--min">
-                  от <input type="text" name="min-price" value="0" /></label>
-                <label class="price__control price__control--max">
-                  до <input type="text" name="max-price" value="5000" /></label>
+                <label class="price__control price__control--min" for="min-price">
+                  от <input type="text" id="min-price" name="min-price" value="0" /></label>
+                <label class="price__control price__control--max" for="max-price">
+                  до <input type="text" id="max-price" name="max-price" value="5000" /></label>
               </div>
             </fieldset>
 
@@ -441,7 +442,7 @@
           </li>
         </ul>
         <a class="footer__academy" href="https://htmlacademy.ru/intensive/htmlcss"  aria-label="htmlacademy">
-          <img src="img/logo-academy.png" alt="Академия" />
+          <img src="img/logo-academy.png" width="27" height="34" alt="Академия" />
         </a>
       </div>
     </div>

@@ -190,6 +190,10 @@ img {
   top: 20px;
 }
 
+.search__label {
+  display: none;
+}
+
 .search__input {
   border: none;
   padding-left: 38px;

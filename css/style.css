@@ -1869,7 +1869,6 @@ img {
 .footer__tel a {
   color: var(--basic-white);
   display: flex;
-  align-items: center;
   padding-left: 7px;
 }
 
